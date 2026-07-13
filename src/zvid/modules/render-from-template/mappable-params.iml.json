@@ -1,0 +1,32 @@
+[
+    {
+        "name": "templateId",
+        "type": "text",
+        "label": "Template ID",
+        "required": true,
+        "help": "Template ID, e.g. tpl_XXXXXXXXXXXXXXXXXXXX (browse them with List Templates)."
+    },
+    {
+        "name": "renderType",
+        "type": "select",
+        "label": "Render Type",
+        "required": true,
+        "default": "video",
+        "options": [
+            { "label": "Video", "value": "video" },
+            { "label": "Image", "value": "image" }
+        ]
+    },
+    {
+        "name": "variables",
+        "type": "any",
+        "label": "Variables",
+        "help": "Template variable values as a JSON object, keyed by variable name."
+    },
+    {
+        "name": "webhookUrl",
+        "type": "url",
+        "label": "Webhook URL",
+        "help": "Optional per-job webhook notified on render.completed / render.failed."
+    }
+]

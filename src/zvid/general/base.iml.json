@@ -1,0 +1,14 @@
+{
+    "baseUrl": "https://api.zvid.io",
+    "headers": {
+        "x-api-key": "{{connection.apiKey}}"
+    },
+    "response": {
+        "error": {
+            "message": "[{{statusCode}}] {{ifempty(body.message, body.error)}}"
+        }
+    },
+    "log": {
+        "sanitize": ["request.headers.x-api-key"]
+    }
+}

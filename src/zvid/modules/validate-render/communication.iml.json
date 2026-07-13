@@ -1,0 +1,25 @@
+{
+    "url": "/api/render/validate/api-key",
+    "method": "POST",
+    "body": {
+        "payload": "{{if(parameters.source = 'json', parameters.projectJson, undefined)}}",
+        "template": "{{if(parameters.source = 'template', parameters.templateId, undefined)}}",
+        "variables": "{{if(parameters.source = 'template', parameters.variables, undefined)}}",
+        "overrides": "{{ifempty(parameters.overrides, undefined)}}",
+        "webhookUrl": "{{ifempty(parameters.webhookUrl, undefined)}}"
+    },
+    "response": {
+        "valid": "{{or(statusCode = 200, statusCode = 400)}}",
+        "error": {
+            "message": "[{{statusCode}}] {{ifempty(body.message, body.error)}}"
+        },
+        "output": {
+            "valid": "{{if(statusCode = 200, true, false)}}",
+            "message": "{{ifempty(body.message, body.error)}}",
+            "creditsRequired": "{{body.creditsRequired}}",
+            "errors": "{{body.details}}",
+            "planLimits": "{{body.planLimits}}",
+            "payload": "{{body.payload}}"
+        }
+    }
+}

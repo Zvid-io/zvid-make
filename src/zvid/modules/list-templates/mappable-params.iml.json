@@ -1,0 +1,10 @@
+[
+    {
+        "name": "limit",
+        "type": "uinteger",
+        "label": "Limit",
+        "required": true,
+        "default": 20,
+        "help": "Maximum number of templates to return (max 100)."
+    }
+]

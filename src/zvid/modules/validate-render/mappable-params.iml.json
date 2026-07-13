@@ -1,0 +1,67 @@
+[
+    {
+        "name": "source",
+        "type": "select",
+        "label": "Source",
+        "required": true,
+        "default": "json",
+        "options": [
+            {
+                "label": "Project JSON",
+                "value": "json",
+                "nested": [
+                    {
+                        "name": "projectJson",
+                        "type": "any",
+                        "label": "Project JSON",
+                        "required": true,
+                        "help": "Full Zvid project spec to check. Element types: IMAGE, VIDEO, GIF, SVG, TEXT (in visuals), plus audios, scenes and subtitle. The backend validation is the source of truth — field-level problems come back in `errors`."
+                    }
+                ]
+            },
+            {
+                "label": "Template",
+                "value": "template",
+                "nested": [
+                    {
+                        "name": "templateId",
+                        "type": "text",
+                        "label": "Template ID",
+                        "required": true,
+                        "help": "Template ID, e.g. tpl_XXXXXXXXXXXXXXXXXXXX. Variables are resolved server-side BEFORE validation."
+                    },
+                    {
+                        "name": "variables",
+                        "type": "collection",
+                        "label": "Variables",
+                        "spec": [],
+                        "help": "Template variable values, keyed by variable name (use a JSON object)."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "overrides",
+        "type": "collection",
+        "label": "Overrides",
+        "help": "Output overrides validated together with the payload/template (same fields as Create a Render).",
+        "spec": [
+            { "name": "name", "type": "text", "label": "Output Name" },
+            { "name": "width", "type": "uinteger", "label": "Width" },
+            { "name": "height", "type": "uinteger", "label": "Height" },
+            { "name": "outputFormat", "type": "text", "label": "Output Format" },
+            { "name": "frameRate", "type": "number", "label": "Frame Rate" },
+            { "name": "backgroundColor", "type": "text", "label": "Background Color" },
+            { "name": "snapshotTime", "type": "number", "label": "Snapshot Time (Images)" },
+            { "name": "quality", "type": "number", "label": "Quality (Images)" },
+            { "name": "transparent", "type": "boolean", "label": "Transparent (Images)" }
+        ]
+    },
+    {
+        "name": "webhookUrl",
+        "type": "url",
+        "label": "Webhook URL",
+        "help": "Optional — included so the whole render request is validated, not just the payload."
+    }
+]

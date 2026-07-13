@@ -1,0 +1,77 @@
+[
+    {
+        "name": "renderType",
+        "type": "select",
+        "label": "Render Type",
+        "required": true,
+        "default": "video",
+        "options": [
+            { "label": "Video", "value": "video" },
+            { "label": "Image", "value": "image" }
+        ]
+    },
+    {
+        "name": "source",
+        "type": "select",
+        "label": "Source",
+        "required": true,
+        "default": "template",
+        "options": [
+            {
+                "label": "Template",
+                "value": "template",
+                "nested": [
+                    {
+                        "name": "templateId",
+                        "type": "text",
+                        "label": "Template ID",
+                        "required": true,
+                        "help": "Template ID, e.g. tpl_XXXXXXXXXXXXXXXXXXXX."
+                    },
+                    {
+                        "name": "variables",
+                        "type": "collection",
+                        "label": "Variables",
+                        "spec": [],
+                        "help": "Template variable values, keyed by variable name (use a JSON object)."
+                    }
+                ]
+            },
+            {
+                "label": "Project JSON",
+                "value": "json",
+                "nested": [
+                    {
+                        "name": "projectJson",
+                        "type": "any",
+                        "label": "Project JSON",
+                        "required": true,
+                        "help": "Full Zvid project spec (scenes, elements, output settings). Elements go in `visuals` with type IMAGE, VIDEO, GIF, SVG or TEXT; soundtracks in `audios`; captions in `subtitle`. Layout tips for AI-generated JSON: use `scenes` for sequential messages; `position` presets ignore x/y (use position 'custom' for offsets); put headline + subline inside one TEXT element's html; build cards as one flex-centered TEXT element. Run the payload through 'Validate a Render Payload' first to catch problems for free — it returns field-level errors and your plan limits."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "overrides",
+        "type": "collection",
+        "label": "Overrides",
+        "spec": [
+            { "name": "name", "type": "text", "label": "Output Name" },
+            { "name": "width", "type": "uinteger", "label": "Width" },
+            { "name": "height", "type": "uinteger", "label": "Height" },
+            { "name": "outputFormat", "type": "text", "label": "Output Format" },
+            { "name": "frameRate", "type": "number", "label": "Frame Rate" },
+            { "name": "backgroundColor", "type": "text", "label": "Background Color" },
+            { "name": "snapshotTime", "type": "number", "label": "Snapshot Time (Images)" },
+            { "name": "quality", "type": "number", "label": "Quality (Images)" },
+            { "name": "transparent", "type": "boolean", "label": "Transparent (Images)" }
+        ]
+    },
+    {
+        "name": "webhookUrl",
+        "type": "url",
+        "label": "Webhook URL",
+        "help": "Optional per-job webhook notified on render.completed / render.failed."
+    }
+]

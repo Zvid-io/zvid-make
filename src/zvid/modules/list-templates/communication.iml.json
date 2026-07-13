@@ -1,0 +1,12 @@
+{
+    "url": "/api/templates",
+    "method": "GET",
+    "qs": {
+        "limit": "{{parameters.limit}}"
+    },
+    "response": {
+        "iterate": "{{body.templates}}",
+        "output": "{{item}}",
+        "limit": "{{parameters.limit}}"
+    }
+}

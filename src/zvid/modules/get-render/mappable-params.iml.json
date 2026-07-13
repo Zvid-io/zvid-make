@@ -1,0 +1,9 @@
+[
+    {
+        "name": "jobId",
+        "type": "text",
+        "label": "Job ID",
+        "required": true,
+        "help": "Render job ID (UUID) returned when the render was created."
+    }
+]

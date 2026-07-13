@@ -1,0 +1,10 @@
+[
+    {
+        "label": "Renders",
+        "modules": ["create-render", "validate-render", "get-render", "list-renders", "watch-renders"]
+    },
+    {
+        "label": "Templates",
+        "modules": ["list-templates", "render-from-template"]
+    }
+]

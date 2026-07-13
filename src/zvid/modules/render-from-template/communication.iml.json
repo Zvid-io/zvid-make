@@ -1,0 +1,16 @@
+{
+    "url": "{{if(parameters.renderType = 'image', '/api/render/image/api-key', '/api/render/api-key')}}",
+    "method": "POST",
+    "body": {
+        "template": "{{parameters.templateId}}",
+        "variables": "{{ifempty(parameters.variables, undefined)}}",
+        "webhookUrl": "{{ifempty(parameters.webhookUrl, undefined)}}"
+    },
+    "response": {
+        "output": {
+            "jobId": "{{body.jobId}}",
+            "status": "{{ifempty(body.status, 'queued')}}",
+            "creditsReserved": "{{body.creditsReserved}}"
+        }
+    }
+}

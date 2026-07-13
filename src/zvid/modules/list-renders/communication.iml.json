@@ -1,0 +1,13 @@
+{
+    "url": "/api/jobs",
+    "method": "GET",
+    "qs": {
+        "limit": "{{parameters.limit}}",
+        "type": "{{if(parameters.type = 'all', undefined, parameters.type)}}"
+    },
+    "response": {
+        "iterate": "{{body.jobs}}",
+        "output": "{{item}}",
+        "limit": "{{parameters.limit}}"
+    }
+}

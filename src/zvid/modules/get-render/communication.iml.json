@@ -1,0 +1,14 @@
+{
+    "url": "/api/jobs/{{parameters.jobId}}",
+    "method": "GET",
+    "response": {
+        "output": {
+            "jobId": "{{body.id}}",
+            "state": "{{body.state}}",
+            "url": "{{body.result.url}}",
+            "thumbnailUrl": "{{body.result.thumbnailUrl}}",
+            "failedReason": "{{body.failedReason}}",
+            "raw": "{{body}}"
+        }
+    }
+}

@@ -1,0 +1,21 @@
+[
+    {
+        "name": "limit",
+        "type": "uinteger",
+        "label": "Limit",
+        "required": true,
+        "default": 20,
+        "help": "Maximum number of renders to return (max 100)."
+    },
+    {
+        "name": "type",
+        "type": "select",
+        "label": "Type",
+        "default": "all",
+        "options": [
+            { "label": "All", "value": "all" },
+            { "label": "Video", "value": "video" },
+            { "label": "Image", "value": "image" }
+        ]
+    }
+]

@@ -1,0 +1,32 @@
+[
+    { "name": "valid", "type": "boolean", "label": "Valid" },
+    { "name": "message", "type": "text", "label": "Message" },
+    { "name": "creditsRequired", "type": "number", "label": "Credits Required" },
+    {
+        "name": "errors",
+        "type": "array",
+        "label": "Validation Errors",
+        "spec": [
+            { "name": "field", "type": "text", "label": "Field" },
+            { "name": "message", "type": "text", "label": "Message" }
+        ]
+    },
+    {
+        "name": "planLimits",
+        "type": "collection",
+        "label": "Plan Limits",
+        "spec": [
+            { "name": "planName", "type": "text", "label": "Plan" },
+            { "name": "maxDuration", "type": "number", "label": "Max Duration (s)" },
+            { "name": "maxOutputResolution", "type": "number", "label": "Max Output Resolution" },
+            { "name": "maxVisualElements", "type": "number", "label": "Max Visual Elements" },
+            { "name": "maxImagesCount", "type": "number", "label": "Max Images" },
+            { "name": "maxVideosCount", "type": "number", "label": "Max Videos" },
+            { "name": "maxGifsCount", "type": "number", "label": "Max GIFs" },
+            { "name": "maxAudioElements", "type": "number", "label": "Max Audio Elements" },
+            { "name": "maxCaptionElements", "type": "number", "label": "Max Captions" },
+            { "name": "maxScenes", "type": "number", "label": "Max Scenes" }
+        ]
+    },
+    { "name": "payload", "type": "collection", "label": "Resolved Payload" }
+]
