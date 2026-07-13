@@ -1,0 +1,9 @@
+[
+    {
+        "name": "templateId",
+        "type": "text",
+        "label": "Source Template ID",
+        "required": true,
+        "help": "Creates an active editable copy and consumes one template quota slot."
+    }
+]

@@ -12,6 +12,16 @@
         ]
     },
     {
+        "name": "warnings",
+        "type": "array",
+        "label": "Professional Layout Warnings",
+        "spec": [
+            { "name": "field", "type": "text", "label": "Field" },
+            { "name": "message", "type": "text", "label": "Message" }
+        ]
+    },
+    { "name": "schemaVersion", "type": "text", "label": "Schema Version" },
+    {
         "name": "planLimits",
         "type": "collection",
         "label": "Plan Limits",

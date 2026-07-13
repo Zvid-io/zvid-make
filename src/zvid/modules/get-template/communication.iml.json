@@ -1,0 +1,5 @@
+{
+    "url": "/api/templates/{{parameters.templateId}}",
+    "method": "GET",
+    "response": { "output": "{{body.template}}" }
+}

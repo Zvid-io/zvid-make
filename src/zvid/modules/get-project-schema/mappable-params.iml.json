@@ -1,0 +1,14 @@
+[
+    {
+        "name": "target",
+        "type": "select",
+        "label": "Schema Target",
+        "required": true,
+        "default": "project",
+        "options": [
+            { "label": "Project Payload", "value": "project" },
+            { "label": "Full Render Request", "value": "render-request" }
+        ],
+        "help": "Returns the caller-plan-aware JSON Schema, validation notes, professional authoring guidelines, and required authoring workflow."
+    }
+]

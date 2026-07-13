@@ -1,0 +1,8 @@
+[
+    { "name": "schemaVersion", "type": "text", "label": "Schema Version" },
+    { "name": "repaired", "type": "collection", "label": "Repaired Project" },
+    { "name": "changes", "type": "array", "label": "Repair Changes" },
+    { "name": "valid", "type": "boolean", "label": "Valid After Repair" },
+    { "name": "remainingErrors", "type": "array", "label": "Remaining Errors" },
+    { "name": "warnings", "type": "array", "label": "Professional Layout Warnings" }
+]

@@ -1,0 +1,4 @@
+[
+    { "name": "schemaVersion", "type": "text", "label": "Schema Version" },
+    { "name": "element", "type": "collection", "label": "Element Documentation" }
+]

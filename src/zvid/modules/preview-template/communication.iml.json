@@ -1,0 +1,9 @@
+{
+    "url": "/api/templates/{{parameters.templateId}}/preview",
+    "method": "POST",
+    "body": {
+        "variables": "{{ifempty(parameters.variables, undefined)}}",
+        "overrides": "{{ifempty(parameters.overrides, undefined)}}"
+    },
+    "response": { "output": "{{body}}" }
+}

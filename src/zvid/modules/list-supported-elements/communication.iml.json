@@ -1,0 +1,5 @@
+{
+    "url": "/api/render/elements/api-key",
+    "method": "GET",
+    "response": { "output": "{{body}}" }
+}

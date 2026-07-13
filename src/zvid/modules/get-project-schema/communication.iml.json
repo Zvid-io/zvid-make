@@ -1,0 +1,6 @@
+{
+    "url": "/api/render/schema/api-key",
+    "method": "GET",
+    "qs": { "target": "{{parameters.target}}" },
+    "response": { "output": "{{body}}" }
+}

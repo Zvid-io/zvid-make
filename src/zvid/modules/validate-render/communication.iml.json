@@ -18,6 +18,8 @@
             "message": "{{ifempty(body.message, body.error)}}",
             "creditsRequired": "{{body.creditsRequired}}",
             "errors": "{{body.details}}",
+            "warnings": "{{body.warnings}}",
+            "schemaVersion": "{{body.schemaVersion}}",
             "planLimits": "{{body.planLimits}}",
             "payload": "{{body.payload}}"
         }

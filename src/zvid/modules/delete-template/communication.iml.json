@@ -1,0 +1,5 @@
+{
+    "url": "/api/templates/{{parameters.templateId}}",
+    "method": "DELETE",
+    "response": { "output": "{{body}}" }
+}

@@ -1,0 +1,10 @@
+[
+    { "name": "schemaVersion", "type": "text", "label": "Schema Version" },
+    { "name": "sourceOfTruth", "type": "text", "label": "Source of Truth" },
+    { "name": "target", "type": "text", "label": "Target" },
+    { "name": "jsonSchema", "type": "any", "label": "JSON Schema" },
+    { "name": "validationNotes", "type": "array", "label": "Validation Notes" },
+    { "name": "authoringGuidelines", "type": "array", "label": "Professional Authoring Guidelines" },
+    { "name": "authoringWorkflow", "type": "array", "label": "Required Authoring Workflow" },
+    { "name": "planLimits", "type": "collection", "label": "Plan Limits" }
+]

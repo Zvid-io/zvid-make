@@ -1,0 +1,17 @@
+[
+    {
+        "name": "name",
+        "type": "select",
+        "label": "Example",
+        "required": true,
+        "default": "promo-video",
+        "options": [
+            { "label": "All Examples", "value": "all" },
+            { "label": "Promo Video", "value": "promo-video" },
+            { "label": "Still Image", "value": "still-image" },
+            { "label": "Subtitles", "value": "subtitles" },
+            { "label": "Template Render", "value": "template-render" },
+            { "label": "Webhook Flow", "value": "webhook-flow" }
+        ]
+    }
+]

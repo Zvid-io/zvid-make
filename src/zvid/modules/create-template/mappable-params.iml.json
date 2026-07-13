@@ -1,0 +1,22 @@
+[
+    {
+        "name": "name",
+        "type": "text",
+        "label": "Template Name",
+        "required": true
+    },
+    {
+        "name": "description",
+        "type": "text",
+        "label": "Description",
+        "required": false,
+        "help": "Describe the template purpose and expected variables."
+    },
+    {
+        "name": "projectJson",
+        "type": "collection",
+        "label": "Template Project JSON",
+        "required": true,
+        "help": "Complete AI-authored project JSON. Retrieve the schema first; placeholders need defaults and video scenes need explicit durations."
+    }
+]

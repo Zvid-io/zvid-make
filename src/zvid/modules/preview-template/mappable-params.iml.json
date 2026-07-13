@@ -1,0 +1,21 @@
+[
+    {
+        "name": "templateId",
+        "type": "text",
+        "label": "Template ID",
+        "required": true
+    },
+    {
+        "name": "variables",
+        "type": "collection",
+        "label": "Variables",
+        "required": false
+    },
+    {
+        "name": "overrides",
+        "type": "collection",
+        "label": "Output Overrides",
+        "required": false,
+        "help": "Free dry run: resolves variables and validates without rendering or spending credits."
+    }
+]

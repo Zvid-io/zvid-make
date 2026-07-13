@@ -5,6 +5,10 @@
     },
     {
         "label": "Templates",
-        "modules": ["list-templates", "render-from-template"]
+        "modules": ["list-templates", "get-template", "create-template", "update-template", "delete-template", "duplicate-template", "preview-template", "render-from-template"]
+    },
+    {
+        "label": "AI Authoring",
+        "modules": ["get-project-schema", "list-supported-elements", "get-element-docs", "get-example-project", "repair-project"]
     }
 ]

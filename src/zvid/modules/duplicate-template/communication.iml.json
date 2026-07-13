@@ -1,0 +1,5 @@
+{
+    "url": "/api/templates/{{parameters.templateId}}/duplicate",
+    "method": "POST",
+    "response": { "output": "{{body.template}}" }
+}

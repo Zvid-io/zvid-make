@@ -1,0 +1,10 @@
+{
+    "url": "/api/templates",
+    "method": "POST",
+    "body": {
+        "name": "{{parameters.name}}",
+        "description": "{{ifempty(parameters.description, undefined)}}",
+        "payload": "{{parameters.projectJson}}"
+    },
+    "response": { "output": "{{body.template}}" }
+}

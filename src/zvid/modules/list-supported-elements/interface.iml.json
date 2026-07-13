@@ -1,0 +1,6 @@
+[
+    { "name": "schemaVersion", "type": "text", "label": "Schema Version" },
+    { "name": "elements", "type": "array", "label": "Supported Elements" },
+    { "name": "notes", "type": "array", "label": "Element Notes" },
+    { "name": "authoringGuidelines", "type": "array", "label": "Professional Authoring Guidelines" }
+]

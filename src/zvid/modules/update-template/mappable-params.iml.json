@@ -1,0 +1,27 @@
+[
+    {
+        "name": "templateId",
+        "type": "text",
+        "label": "Template ID",
+        "required": true
+    },
+    {
+        "name": "name",
+        "type": "text",
+        "label": "New Name",
+        "required": false
+    },
+    {
+        "name": "description",
+        "type": "text",
+        "label": "New Description",
+        "required": false
+    },
+    {
+        "name": "projectJson",
+        "type": "collection",
+        "label": "Replacement Project JSON",
+        "required": false,
+        "help": "If supplied, this replaces the complete template project and is validated before saving."
+    }
+]

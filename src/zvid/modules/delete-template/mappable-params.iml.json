@@ -1,0 +1,9 @@
+[
+    {
+        "name": "templateId",
+        "type": "text",
+        "label": "Template ID",
+        "required": true,
+        "help": "Archives the active template. Archived templates cannot be rendered or updated."
+    }
+]

@@ -1,0 +1,6 @@
+[
+    { "name": "schemaVersion", "type": "text", "label": "Schema Version" },
+    { "name": "example", "type": "collection", "label": "Example" },
+    { "name": "examples", "type": "array", "label": "Examples" },
+    { "name": "authoringWorkflow", "type": "array", "label": "Required Authoring Workflow" }
+]

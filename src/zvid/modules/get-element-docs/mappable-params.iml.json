@@ -1,0 +1,19 @@
+[
+    {
+        "name": "elementType",
+        "type": "select",
+        "label": "Element Type",
+        "required": true,
+        "default": "TEXT",
+        "options": [
+            { "label": "Text", "value": "TEXT" },
+            { "label": "Image", "value": "IMAGE" },
+            { "label": "Video", "value": "VIDEO" },
+            { "label": "GIF", "value": "GIF" },
+            { "label": "SVG", "value": "SVG" },
+            { "label": "Audio", "value": "AUDIO" },
+            { "label": "Subtitle", "value": "SUBTITLE" },
+            { "label": "Scene", "value": "SCENE" }
+        ]
+    }
+]
