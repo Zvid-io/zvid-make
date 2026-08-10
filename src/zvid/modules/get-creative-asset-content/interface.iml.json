@@ -1,0 +1,8 @@
+[
+    {
+        "name": "content",
+        "type": "collection",
+        "label": "Asset content",
+        "spec": []
+    }
+]

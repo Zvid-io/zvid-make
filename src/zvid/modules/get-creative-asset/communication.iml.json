@@ -1,0 +1,7 @@
+{
+    "url": "/api/library/{{parameters.kind}}/{{parameters.slug}}",
+    "method": "GET",
+    "response": {
+        "output": "{{body}}"
+    }
+}

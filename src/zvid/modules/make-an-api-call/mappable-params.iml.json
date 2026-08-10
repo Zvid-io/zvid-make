@@ -1,0 +1,79 @@
+[
+    {
+        "name": "url",
+        "type": "text",
+        "label": "URL",
+        "required": true,
+        "default": "/api/credits/balance",
+        "help": "Enter the part of the URL that comes after `https://api.zvid.io`. For example, `/api/credits/balance`. Only relative Zvid API paths are accepted."
+    },
+    {
+        "name": "method",
+        "type": "select",
+        "label": "Method",
+        "required": true,
+        "default": "GET",
+        "options": [
+            {
+                "label": "GET",
+                "value": "GET"
+            },
+            {
+                "label": "POST",
+                "value": "POST"
+            },
+            {
+                "label": "PUT",
+                "value": "PUT"
+            },
+            {
+                "label": "DELETE",
+                "value": "DELETE"
+            },
+            {
+                "label": "OPTIONS",
+                "value": "OPTIONS"
+            }
+        ]
+    },
+    {
+        "name": "headers",
+        "type": "array",
+        "label": "Headers",
+        "spec": [
+            {
+                "name": "key",
+                "type": "text",
+                "label": "Key"
+            },
+            {
+                "name": "value",
+                "type": "text",
+                "label": "Value"
+            }
+        ]
+    },
+    {
+        "name": "qs",
+        "type": "array",
+        "label": "Query string",
+        "spec": [
+            {
+                "name": "key",
+                "type": "text",
+                "label": "Key"
+            },
+            {
+                "name": "value",
+                "type": "text",
+                "label": "Value"
+            }
+        ]
+    },
+    {
+        "name": "body",
+        "type": "json",
+        "label": "Body",
+        "help": "Optional JSON request body. It is ignored for GET requests."
+    }
+]

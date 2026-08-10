@@ -1,8 +1,44 @@
 [
-    { "name": "schemaVersion", "type": "text", "label": "Schema Version" },
-    { "name": "repaired", "type": "collection", "label": "Repaired Project" },
-    { "name": "changes", "type": "array", "label": "Repair Changes" },
-    { "name": "valid", "type": "boolean", "label": "Valid After Repair" },
-    { "name": "remainingErrors", "type": "array", "label": "Remaining Errors" },
-    { "name": "warnings", "type": "array", "label": "Professional Layout Warnings" }
+    {
+        "name": "schemaVersion",
+        "type": "text",
+        "label": "Schema version"
+    },
+    {
+        "name": "sourceOfTruth",
+        "type": "text",
+        "label": "Source of truth"
+    },
+    {
+        "name": "planLimits",
+        "type": "collection",
+        "label": "Plan limits",
+        "spec": []
+    },
+    {
+        "name": "repaired",
+        "type": "collection",
+        "label": "Repaired project",
+        "spec": []
+    },
+    {
+        "name": "changes",
+        "type": "array",
+        "label": "Repair changes"
+    },
+    {
+        "name": "valid",
+        "type": "boolean",
+        "label": "Valid after repair"
+    },
+    {
+        "name": "remainingErrors",
+        "type": "array",
+        "label": "Remaining errors"
+    },
+    {
+        "name": "warnings",
+        "type": "array",
+        "label": "Professional layout warnings"
+    }
 ]

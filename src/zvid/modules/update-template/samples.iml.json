@@ -1,0 +1,13 @@
+{
+    "id": "tpl_00000000000000000000",
+    "userId": 1,
+    "name": "Updated template",
+    "description": "Updated reusable template",
+    "project": {},
+    "type": "video",
+    "variablesSummary": [],
+    "version": 2,
+    "status": "active",
+    "createdAt": "2026-01-01T00:00:00.000Z",
+    "updatedAt": "2026-01-01T00:05:00.000Z"
+}

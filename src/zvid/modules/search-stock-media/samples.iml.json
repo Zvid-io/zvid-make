@@ -1,0 +1,14 @@
+{
+    "id": "stock-example",
+    "kind": "video",
+    "preview": "https://media.example.com/preview.jpg",
+    "src": "https://media.example.com/render.mp4",
+    "width": 1920,
+    "height": 1080,
+    "duration": 8,
+    "description": "Example stock video",
+    "credit": {
+        "name": "Example creator",
+        "link": "https://example.com"
+    }
+}

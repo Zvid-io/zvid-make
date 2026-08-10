@@ -2,12 +2,18 @@
     {
         "name": "renderType",
         "type": "select",
-        "label": "Render Type",
+        "label": "Render type",
         "required": true,
         "default": "video",
         "options": [
-            { "label": "Video", "value": "video" },
-            { "label": "Image", "value": "image" }
+            {
+                "label": "Video",
+                "value": "video"
+            },
+            {
+                "label": "Image",
+                "value": "image"
+            }
         ]
     },
     {
@@ -30,9 +36,9 @@
                     },
                     {
                         "name": "variables",
-                        "type": "collection",
+                        "type": "json",
                         "label": "Variables",
-                        "spec": [],
+                        "default": "{}",
                         "help": "Template variable values, keyed by variable name (use a JSON object)."
                     }
                 ]
@@ -43,10 +49,18 @@
                 "nested": [
                     {
                         "name": "projectJson",
-                        "type": "any",
+                        "type": "json",
                         "label": "Project JSON",
                         "required": true,
+                        "default": "{}",
                         "help": "Full Zvid project spec (scenes, elements, output settings). Elements go in `visuals` with type IMAGE, VIDEO, GIF, SVG or TEXT; soundtracks in `audios`; captions in `subtitle`. Layout tips for AI-generated JSON: use `scenes` for sequential messages; `position` presets ignore x/y (use position 'custom' for offsets); put headline + subline inside one TEXT element's html; build cards as one flex-centered TEXT element. Run the payload through 'Validate a Render Payload' first to catch problems for free — it returns field-level errors and your plan limits."
+                    },
+                    {
+                        "name": "variables",
+                        "type": "json",
+                        "label": "Variables",
+                        "default": "{}",
+                        "help": "Variable values used to resolve placeholders in the project JSON."
                     }
                 ]
             }
@@ -57,15 +71,51 @@
         "type": "collection",
         "label": "Overrides",
         "spec": [
-            { "name": "name", "type": "text", "label": "Output Name" },
-            { "name": "width", "type": "uinteger", "label": "Width" },
-            { "name": "height", "type": "uinteger", "label": "Height" },
-            { "name": "outputFormat", "type": "text", "label": "Output Format" },
-            { "name": "frameRate", "type": "number", "label": "Frame Rate" },
-            { "name": "backgroundColor", "type": "text", "label": "Background Color" },
-            { "name": "snapshotTime", "type": "number", "label": "Snapshot Time (Images)" },
-            { "name": "quality", "type": "number", "label": "Quality (Images)" },
-            { "name": "transparent", "type": "boolean", "label": "Transparent (Images)" }
+            {
+                "name": "name",
+                "type": "text",
+                "label": "Output name"
+            },
+            {
+                "name": "width",
+                "type": "uinteger",
+                "label": "Width"
+            },
+            {
+                "name": "height",
+                "type": "uinteger",
+                "label": "Height"
+            },
+            {
+                "name": "outputFormat",
+                "type": "text",
+                "label": "Output format"
+            },
+            {
+                "name": "frameRate",
+                "type": "number",
+                "label": "Frame rate"
+            },
+            {
+                "name": "backgroundColor",
+                "type": "text",
+                "label": "Background color"
+            },
+            {
+                "name": "snapshotTime",
+                "type": "number",
+                "label": "Snapshot time (images)"
+            },
+            {
+                "name": "quality",
+                "type": "number",
+                "label": "Quality (images)"
+            },
+            {
+                "name": "transparent",
+                "type": "boolean",
+                "label": "Transparent (images)"
+            }
         ]
     },
     {

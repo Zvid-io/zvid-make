@@ -1,0 +1,20 @@
+{
+    "url": "/api/library/{{parameters.kind}}",
+    "method": "GET",
+    "qs": {
+        "q": "{{ifempty(parameters.query, undefined)}}",
+        "limit": 100,
+        "offset": 0
+    },
+    "response": {
+        "iterate": "{{body.items}}",
+        "output": "{{item}}",
+        "limit": "{{parameters.limit}}"
+    },
+    "pagination": {
+        "qs": {
+            "offset": "{{(pagination.page - 1) * 100}}"
+        },
+        "condition": "{{body.hasMore}}"
+    }
+}

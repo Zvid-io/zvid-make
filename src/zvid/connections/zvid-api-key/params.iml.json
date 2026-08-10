@@ -2,8 +2,8 @@
     {
         "name": "apiKey",
         "type": "password",
-        "label": "API Key",
+        "label": "API key",
         "required": true,
-        "help": "Your Zvid API key (zvid_…), created in the Zvid dashboard under Settings → API Keys."
+        "help": "Your Zvid API key (zvid_…), created at https://app.zvid.io/api-keys."
     }
 ]

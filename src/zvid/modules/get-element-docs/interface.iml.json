@@ -1,4 +1,24 @@
 [
-    { "name": "schemaVersion", "type": "text", "label": "Schema Version" },
-    { "name": "element", "type": "collection", "label": "Element Documentation" }
+    {
+        "name": "schemaVersion",
+        "type": "text",
+        "label": "Schema version"
+    },
+    {
+        "name": "sourceOfTruth",
+        "type": "text",
+        "label": "Source of truth"
+    },
+    {
+        "name": "planLimits",
+        "type": "collection",
+        "label": "Plan limits",
+        "spec": []
+    },
+    {
+        "name": "element",
+        "type": "collection",
+        "label": "Element documentation",
+        "spec": []
+    }
 ]

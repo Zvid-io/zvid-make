@@ -1,0 +1,17 @@
+[
+    {
+        "name": "jobId",
+        "type": "text",
+        "label": "Job ID"
+    },
+    {
+        "name": "status",
+        "type": "text",
+        "label": "Status"
+    },
+    {
+        "name": "creditsReserved",
+        "type": "number",
+        "label": "Credits reserved"
+    }
+]

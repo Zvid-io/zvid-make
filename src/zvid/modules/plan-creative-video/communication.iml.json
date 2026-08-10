@@ -1,0 +1,22 @@
+{
+    "url": "/api/render/creative-plan/api-key",
+    "method": "POST",
+    "body": {
+        "brief": "{{parameters.brief}}",
+        "variationMode": "{{parameters.variationMode}}",
+        "variationSeed": "{{ifempty(parameters.variationSeed, undefined)}}",
+        "exploreCount": "{{if(parameters.variationMode = 'explore', parameters.exploreCount, undefined)}}",
+        "aspectRatio": "{{parameters.aspectRatio}}",
+        "duration": "{{parameters.duration}}",
+        "style": "{{parameters.style}}",
+        "motionIntensity": "{{if(parameters.motionIntensity = 'auto', undefined, parameters.motionIntensity)}}",
+        "preferredMedia": "{{parameters.preferredMedia}}",
+        "recentAssetSlugs": "{{ifempty(parameters.recentAssetSlugs, undefined)}}",
+        "brand": "{{ifempty(parameters.brand, undefined)}}"
+    },
+    "response": {
+        "output": {
+            "plan": "{{body}}"
+        }
+    }
+}

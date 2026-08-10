@@ -1,0 +1,12 @@
+{
+    "url": "/api/stock/providers",
+    "method": "GET",
+    "response": {
+        "output": {
+            "image": "{{length(body.image) > 0}}",
+            "video": "{{length(body.video) > 0}}",
+            "gif": "{{length(body.gif) > 0}}",
+            "audio": "{{length(body.audio) > 0}}"
+        }
+    }
+}

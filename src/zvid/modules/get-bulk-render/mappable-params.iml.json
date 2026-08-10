@@ -1,0 +1,9 @@
+[
+    {
+        "name": "bulkId",
+        "type": "text",
+        "label": "Bulk ID",
+        "required": true,
+        "help": "Bulk render ID returned by Bulk create renders (advanced), beginning with `blk_`."
+    }
+]

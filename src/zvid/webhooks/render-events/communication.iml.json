@@ -1,5 +1,5 @@
 {
-    "condition": "{{if(webhook.secret, headers.`x-zvid-signature` = 'sha256=' + sha256(headers.`x-zvid-timestamp` + '.' + json(body), 'hex', webhook.secret), true)}}",
+    "condition": "{{headers.`x-zvid-signature` = 'sha256=' + sha256(headers.`x-zvid-timestamp` + '.' + json(body), 'hex', webhook.secret)}}",
     "respond": {
         "status": 200
     },

@@ -2,7 +2,7 @@
     {
         "name": "name",
         "type": "text",
-        "label": "Template Name",
+        "label": "Template name",
         "required": true
     },
     {
@@ -14,9 +14,10 @@
     },
     {
         "name": "projectJson",
-        "type": "collection",
-        "label": "Template Project JSON",
+        "type": "json",
+        "label": "Template project JSON",
         "required": true,
+        "default": "{}",
         "help": "Complete AI-authored project JSON. Retrieve the schema first; placeholders need defaults and video scenes need explicit durations."
     }
 ]

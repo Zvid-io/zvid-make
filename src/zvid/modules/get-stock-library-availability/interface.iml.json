@@ -1,0 +1,22 @@
+[
+    {
+        "name": "image",
+        "type": "boolean",
+        "label": "Images available"
+    },
+    {
+        "name": "video",
+        "type": "boolean",
+        "label": "Videos available"
+    },
+    {
+        "name": "gif",
+        "type": "boolean",
+        "label": "GIFs available"
+    },
+    {
+        "name": "audio",
+        "type": "boolean",
+        "label": "Audio available"
+    }
+]

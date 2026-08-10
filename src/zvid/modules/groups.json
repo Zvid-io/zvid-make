@@ -1,14 +1,26 @@
 [
     {
         "label": "Renders",
-        "modules": ["create-render", "validate-render", "get-render", "list-renders", "watch-renders"]
+        "modules": ["createRender", "createBulkRender", "validateRender", "getRender", "getBulkRender", "searchRenders", "watchRenderEvents"]
     },
     {
         "label": "Templates",
-        "modules": ["list-templates", "get-template", "create-template", "update-template", "delete-template", "duplicate-template", "preview-template", "render-from-template"]
+        "modules": ["listTemplates", "getTemplate", "createTemplate", "updateTemplate", "archiveTemplate", "duplicateTemplate", "previewTemplate", "renderFromTemplate"]
     },
     {
         "label": "AI Authoring",
-        "modules": ["get-project-schema", "list-supported-elements", "get-element-docs", "get-example-project", "repair-project"]
+        "modules": ["planCreativeVideo", "getProjectSchema", "listSupportedElements", "getElementDocumentation", "getExampleProject", "repairProject"]
+    },
+    {
+        "label": "Creative Library",
+        "modules": ["searchCreativeAssets", "getCreativeAsset", "getCreativeAssetContent"]
+    },
+    {
+        "label": "Stock Library",
+        "modules": ["searchStockMedia", "getStockLibraryAvailability"]
+    },
+    {
+        "label": "Account",
+        "modules": ["getCreditBalance", "makeAnApiCall"]
     }
 ]

@@ -1,6 +1,22 @@
 [
-    { "name": "jobId", "type": "text", "label": "Job ID" },
-    { "name": "status", "type": "text", "label": "Status" },
-    { "name": "queuePosition", "type": "uinteger", "label": "Queue Position" },
-    { "name": "creditsReserved", "type": "number", "label": "Credits Reserved" }
+    {
+        "name": "jobId",
+        "type": "text",
+        "label": "Job ID"
+    },
+    {
+        "name": "status",
+        "type": "text",
+        "label": "Status"
+    },
+    {
+        "name": "queuePosition",
+        "type": "uinteger",
+        "label": "Queue position"
+    },
+    {
+        "name": "creditsReserved",
+        "type": "number",
+        "label": "Credits reserved"
+    }
 ]

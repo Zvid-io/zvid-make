@@ -1,0 +1,19 @@
+[
+    {
+        "name": "statusCode",
+        "type": "uinteger",
+        "label": "Status code"
+    },
+    {
+        "name": "headers",
+        "type": "collection",
+        "label": "Response headers",
+        "spec": []
+    },
+    {
+        "name": "body",
+        "type": "collection",
+        "label": "Response body",
+        "spec": []
+    }
+]

@@ -1,0 +1,8 @@
+{
+    "jobId": "00000000-0000-4000-8000-000000000001",
+    "state": "completed",
+    "url": "https://cdn.zvid.io/example.mp4",
+    "thumbnailUrl": "https://cdn.zvid.io/example.jpg",
+    "failedReason": null,
+    "raw": {}
+}

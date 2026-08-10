@@ -1,0 +1,14 @@
+{
+    "kind": "examples",
+    "slug": "example-project",
+    "title": "Example project",
+    "description": "A reusable creative example.",
+    "meta": {},
+    "version": 1,
+    "sortOrder": 1,
+    "status": "active",
+    "contentUrl": "https://cdn.zvid.io/library/example-project.json",
+    "contentHash": "example",
+    "createdAt": "2026-01-01T00:00:00.000Z",
+    "updatedAt": "2026-01-01T00:00:00.000Z"
+}

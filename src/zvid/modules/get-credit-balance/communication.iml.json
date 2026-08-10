@@ -1,0 +1,15 @@
+{
+    "url": "/api/credits/balance",
+    "method": "GET",
+    "response": {
+        "output": {
+            "balance": "{{body.balance}}",
+            "subscriptionCredits": "{{body.subscription_credits}}",
+            "addonCredits": {
+                "balance": "{{body.addon_credits.balance}}",
+                "totalEarned": "{{body.addon_credits.total_earned}}",
+                "totalSpent": "{{body.addon_credits.total_spent}}"
+            }
+        }
+    }
+}

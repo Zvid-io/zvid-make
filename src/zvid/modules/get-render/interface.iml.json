@@ -1,8 +1,33 @@
 [
-    { "name": "jobId", "type": "text", "label": "Job ID" },
-    { "name": "state", "type": "text", "label": "State" },
-    { "name": "url", "type": "url", "label": "Output URL" },
-    { "name": "thumbnailUrl", "type": "url", "label": "Thumbnail URL" },
-    { "name": "failedReason", "type": "text", "label": "Failed Reason" },
-    { "name": "raw", "type": "any", "label": "Raw Job" }
+    {
+        "name": "jobId",
+        "type": "text",
+        "label": "Job ID"
+    },
+    {
+        "name": "state",
+        "type": "text",
+        "label": "State"
+    },
+    {
+        "name": "url",
+        "type": "url",
+        "label": "Output URL"
+    },
+    {
+        "name": "thumbnailUrl",
+        "type": "url",
+        "label": "Thumbnail URL"
+    },
+    {
+        "name": "failedReason",
+        "type": "text",
+        "label": "Failed reason"
+    },
+    {
+        "name": "raw",
+        "type": "collection",
+        "label": "Raw job",
+        "spec": []
+    }
 ]

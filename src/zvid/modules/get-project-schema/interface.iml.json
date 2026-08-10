@@ -1,10 +1,44 @@
 [
-    { "name": "schemaVersion", "type": "text", "label": "Schema Version" },
-    { "name": "sourceOfTruth", "type": "text", "label": "Source of Truth" },
-    { "name": "target", "type": "text", "label": "Target" },
-    { "name": "jsonSchema", "type": "any", "label": "JSON Schema" },
-    { "name": "validationNotes", "type": "array", "label": "Validation Notes" },
-    { "name": "authoringGuidelines", "type": "array", "label": "Professional Authoring Guidelines" },
-    { "name": "authoringWorkflow", "type": "array", "label": "Required Authoring Workflow" },
-    { "name": "planLimits", "type": "collection", "label": "Plan Limits" }
+    {
+        "name": "schemaVersion",
+        "type": "text",
+        "label": "Schema version"
+    },
+    {
+        "name": "sourceOfTruth",
+        "type": "text",
+        "label": "Source of truth"
+    },
+    {
+        "name": "target",
+        "type": "text",
+        "label": "Target"
+    },
+    {
+        "name": "jsonSchema",
+        "type": "collection",
+        "label": "JSON schema",
+        "spec": []
+    },
+    {
+        "name": "validationNotes",
+        "type": "array",
+        "label": "Validation notes"
+    },
+    {
+        "name": "authoringGuidelines",
+        "type": "array",
+        "label": "Professional authoring guidelines"
+    },
+    {
+        "name": "authoringWorkflow",
+        "type": "array",
+        "label": "Required authoring workflow"
+    },
+    {
+        "name": "planLimits",
+        "type": "collection",
+        "label": "Plan limits",
+        "spec": []
+    }
 ]

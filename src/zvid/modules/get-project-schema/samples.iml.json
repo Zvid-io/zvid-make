@@ -1,0 +1,10 @@
+{
+    "schemaVersion": "2",
+    "sourceOfTruth": "Zvid API",
+    "target": "project",
+    "jsonSchema": {},
+    "validationNotes": [],
+    "authoringGuidelines": [],
+    "authoringWorkflow": [],
+    "planLimits": {}
+}

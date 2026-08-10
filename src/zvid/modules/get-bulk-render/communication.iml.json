@@ -1,0 +1,18 @@
+{
+    "url": "/api/render/bulk/{{parameters.bulkId}}",
+    "method": "GET",
+    "response": {
+        "output": {
+            "bulkId": "{{body.bulk.id}}",
+            "name": "{{body.bulk.name}}",
+            "templateId": "{{body.bulk.templateId}}",
+            "renderType": "{{body.bulk.type}}",
+            "status": "{{body.bulk.status}}",
+            "totalJobs": "{{body.bulk.totalJobs}}",
+            "creditsReserved": "{{body.bulk.creditsReserved}}",
+            "counts": "{{body.bulk.counts}}",
+            "createdAt": "{{body.bulk.createdAt}}",
+            "jobs": "{{body.jobs}}"
+        }
+    }
+}

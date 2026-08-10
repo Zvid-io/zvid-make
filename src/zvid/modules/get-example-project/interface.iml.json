@@ -1,6 +1,34 @@
 [
-    { "name": "schemaVersion", "type": "text", "label": "Schema Version" },
-    { "name": "example", "type": "collection", "label": "Example" },
-    { "name": "examples", "type": "array", "label": "Examples" },
-    { "name": "authoringWorkflow", "type": "array", "label": "Required Authoring Workflow" }
+    {
+        "name": "schemaVersion",
+        "type": "text",
+        "label": "Schema version"
+    },
+    {
+        "name": "sourceOfTruth",
+        "type": "text",
+        "label": "Source of truth"
+    },
+    {
+        "name": "planLimits",
+        "type": "collection",
+        "label": "Plan limits",
+        "spec": []
+    },
+    {
+        "name": "example",
+        "type": "collection",
+        "label": "Example",
+        "spec": []
+    },
+    {
+        "name": "examples",
+        "type": "array",
+        "label": "Examples"
+    },
+    {
+        "name": "authoringWorkflow",
+        "type": "array",
+        "label": "Required authoring workflow"
+    }
 ]

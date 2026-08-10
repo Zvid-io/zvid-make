@@ -3,8 +3,7 @@
         "name": "limit",
         "type": "uinteger",
         "label": "Limit",
-        "required": true,
-        "default": 20,
-        "help": "Maximum number of templates to return (max 100)."
+        "default": 10,
+        "help": "Maximum number of results to return and work with during one execution cycle. For information about setting limits, see [Types of modules](https://help.make.com/types-of-modules#b3ZEQ)."
     }
 ]

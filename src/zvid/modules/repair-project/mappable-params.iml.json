@@ -1,9 +1,10 @@
 [
     {
         "name": "projectJson",
-        "type": "collection",
+        "type": "json",
         "label": "Project JSON",
         "required": true,
+        "default": "{}",
         "help": "AI-authored Zvid project JSON to repair before validation and rendering."
     }
 ]

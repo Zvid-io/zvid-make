@@ -1,0 +1,31 @@
+{
+    "bulkId": "blk_00000000000000000000",
+    "name": "personalized-offers",
+    "templateId": null,
+    "renderType": "video",
+    "status": "completed",
+    "totalJobs": 2,
+    "creditsReserved": 2,
+    "counts": {
+        "completed": 2,
+        "failed": 0,
+        "pending": 0
+    },
+    "createdAt": "2026-01-01T00:00:00.000Z",
+    "jobs": [
+        {
+            "id": "00000000-0000-4000-8000-000000000001",
+            "status": "completed",
+            "name": "offer-example-r1",
+            "creditsEstimated": 1,
+            "creditsConsumed": 1,
+            "videoDuration": 10,
+            "videoResolution": "1080x1920",
+            "outputUrl": "https://cdn.zvid.io/example.mp4",
+            "thumbnailUrl": "https://cdn.zvid.io/example.jpg",
+            "errorMessage": null,
+            "createdAt": "2026-01-01T00:00:00.000Z",
+            "completedAt": "2026-01-01T00:00:10.000Z"
+        }
+    ]
+}

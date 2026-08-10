@@ -1,0 +1,16 @@
+{
+    "event": "render.completed",
+    "jobId": "00000000-0000-4000-8000-000000000001",
+    "timestamp": "2026-01-01T00:01:00.000Z",
+    "test": false,
+    "data": {
+        "status": "completed",
+        "type": "video",
+        "url": "https://cdn.zvid.io/example.mp4",
+        "thumbnailUrl": "https://cdn.zvid.io/example.jpg",
+        "duration": 1,
+        "size": 1024,
+        "renderDuration": 0.5,
+        "creditsCharged": 1
+    }
+}

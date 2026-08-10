@@ -1,0 +1,10 @@
+{
+    "valid": true,
+    "message": "Payload is valid",
+    "creditsRequired": 1,
+    "errors": [],
+    "warnings": [],
+    "schemaVersion": "2",
+    "planLimits": {},
+    "payload": {}
+}

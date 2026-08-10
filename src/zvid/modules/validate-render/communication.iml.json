@@ -4,12 +4,12 @@
     "body": {
         "payload": "{{if(parameters.source = 'json', parameters.projectJson, undefined)}}",
         "template": "{{if(parameters.source = 'template', parameters.templateId, undefined)}}",
-        "variables": "{{if(parameters.source = 'template', parameters.variables, undefined)}}",
+        "variables": "{{ifempty(parameters.variables, undefined)}}",
         "overrides": "{{ifempty(parameters.overrides, undefined)}}",
         "webhookUrl": "{{ifempty(parameters.webhookUrl, undefined)}}"
     },
     "response": {
-        "valid": "{{or(statusCode = 200, statusCode = 400)}}",
+        "valid": "{{statusCode === 200 || statusCode === 400}}",
         "error": {
             "message": "[{{statusCode}}] {{ifempty(body.message, body.error)}}"
         },

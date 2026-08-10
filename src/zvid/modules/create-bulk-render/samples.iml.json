@@ -1,0 +1,11 @@
+{
+    "bulkId": "bulk_00000000000000000001",
+    "queued": true,
+    "totalJobs": 2,
+    "rejectedItems": 0,
+    "failedToQueue": 0,
+    "creditsReserved": 2,
+    "queueAhead": 0,
+    "errors": [],
+    "jobs": []
+}

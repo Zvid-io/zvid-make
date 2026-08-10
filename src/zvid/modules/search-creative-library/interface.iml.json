@@ -1,0 +1,63 @@
+[
+    {
+        "name": "kind",
+        "type": "text",
+        "label": "Asset type"
+    },
+    {
+        "name": "slug",
+        "type": "text",
+        "label": "Slug"
+    },
+    {
+        "name": "title",
+        "type": "text",
+        "label": "Title"
+    },
+    {
+        "name": "description",
+        "type": "text",
+        "label": "Description"
+    },
+    {
+        "name": "meta",
+        "type": "collection",
+        "label": "Metadata",
+        "spec": []
+    },
+    {
+        "name": "version",
+        "type": "uinteger",
+        "label": "Version"
+    },
+    {
+        "name": "sortOrder",
+        "type": "uinteger",
+        "label": "Sort order"
+    },
+    {
+        "name": "status",
+        "type": "text",
+        "label": "Status"
+    },
+    {
+        "name": "contentUrl",
+        "type": "url",
+        "label": "Content URL"
+    },
+    {
+        "name": "contentHash",
+        "type": "text",
+        "label": "Content hash"
+    },
+    {
+        "name": "createdAt",
+        "type": "date",
+        "label": "Created at"
+    },
+    {
+        "name": "updatedAt",
+        "type": "date",
+        "label": "Updated at"
+    }
+]

@@ -1,0 +1,9 @@
+{
+    "balance": 100,
+    "subscriptionCredits": 80,
+    "addonCredits": {
+        "balance": 20,
+        "totalEarned": 20,
+        "totalSpent": 0
+    }
+}

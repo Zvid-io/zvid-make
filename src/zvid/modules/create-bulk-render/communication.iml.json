@@ -1,0 +1,26 @@
+{
+    "url": "{{if(parameters.renderType = 'image', '/api/render/image/bulk/api-key', '/api/render/bulk/api-key')}}",
+    "method": "POST",
+    "body": {
+        "payload": "{{if(parameters.source = 'json', parameters.projectJson, undefined)}}",
+        "template": "{{if(parameters.source = 'template', parameters.templateId, undefined)}}",
+        "variables": "{{ifempty(parameters.variables, undefined)}}",
+        "items": "{{parameters.items}}",
+        "overrides": "{{ifempty(parameters.overrides, undefined)}}",
+        "name": "{{ifempty(parameters.batchName, undefined)}}",
+        "webhookUrl": "{{ifempty(parameters.webhookUrl, undefined)}}"
+    },
+    "response": {
+        "output": {
+            "bulkId": "{{body.bulkId}}",
+            "queued": "{{body.queued}}",
+            "totalJobs": "{{body.totalJobs}}",
+            "rejectedItems": "{{body.rejectedItems}}",
+            "errors": "{{body.errors}}",
+            "failedToQueue": "{{body.failedToQueue}}",
+            "creditsReserved": "{{body.creditsReserved}}",
+            "queueAhead": "{{body.queueAhead}}",
+            "jobs": "{{body.jobs}}"
+        }
+    }
+}

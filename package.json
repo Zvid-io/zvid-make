@@ -1,0 +1,17 @@
+{
+    "name": "@zvid/make-app-source",
+    "version": "1.0.0",
+    "private": true,
+    "description": "Validated source bundle for the Zvid Make custom app.",
+    "scripts": {
+        "scaffold:clone": "node scripts/scaffold-local-clone.mjs",
+        "sync": "node scripts/sync-to-clone.mjs",
+        "test": "node --test test/app.test.mjs",
+        "test:production": "node scripts/smoke-production.mjs",
+        "test:production:render": "node scripts/smoke-production.mjs --render",
+        "validate": "node --test test/app.test.mjs"
+    },
+    "engines": {
+        "node": ">=20"
+    }
+}

@@ -1,0 +1,39 @@
+[
+    {
+        "name": "type",
+        "type": "select",
+        "label": "Media type",
+        "required": true,
+        "default": "image",
+        "options": [
+            {
+                "label": "Image",
+                "value": "image"
+            },
+            {
+                "label": "Video",
+                "value": "video"
+            },
+            {
+                "label": "GIF",
+                "value": "gif"
+            },
+            {
+                "label": "Audio",
+                "value": "audio"
+            }
+        ]
+    },
+    {
+        "name": "query",
+        "type": "text",
+        "label": "Search query"
+    },
+    {
+        "name": "limit",
+        "type": "uinteger",
+        "label": "Limit",
+        "default": 10,
+        "help": "Maximum number of results to return and work with during one execution cycle. For information about setting limits, see [Types of modules](https://help.make.com/types-of-modules#b3ZEQ)."
+    }
+]

@@ -1,0 +1,215 @@
+[
+    {
+        "name": "brief",
+        "type": "text",
+        "label": "Creative brief",
+        "required": true,
+        "help": "Describe what the video should communicate, its audience, and the desired outcome."
+    },
+    {
+        "name": "variationMode",
+        "type": "select",
+        "label": "Variation mode",
+        "required": true,
+        "default": "fresh",
+        "options": [
+            {
+                "label": "Consistent",
+                "value": "consistent"
+            },
+            {
+                "label": "Fresh",
+                "value": "fresh"
+            },
+            {
+                "label": "Explore",
+                "value": "explore"
+            }
+        ]
+    },
+    {
+        "name": "variationSeed",
+        "type": "text",
+        "label": "Variation seed",
+        "help": "Optional reproducible seed. Reuse it for a consistent direction."
+    },
+    {
+        "name": "exploreCount",
+        "type": "uinteger",
+        "label": "Explore count",
+        "default": 3,
+        "validate": {
+            "min": 2,
+            "max": 5
+        }
+    },
+    {
+        "name": "aspectRatio",
+        "type": "select",
+        "label": "Aspect ratio",
+        "required": true,
+        "default": "16:9",
+        "options": [
+            {
+                "label": "16:9",
+                "value": "16:9"
+            },
+            {
+                "label": "9:16",
+                "value": "9:16"
+            },
+            {
+                "label": "1:1",
+                "value": "1:1"
+            },
+            {
+                "label": "4:5",
+                "value": "4:5"
+            },
+            {
+                "label": "Custom",
+                "value": "custom"
+            }
+        ]
+    },
+    {
+        "name": "duration",
+        "type": "number",
+        "label": "Duration (seconds)",
+        "required": true,
+        "default": 15,
+        "validate": {
+            "min": 0.1
+        }
+    },
+    {
+        "name": "style",
+        "type": "select",
+        "label": "Style",
+        "required": true,
+        "default": "auto",
+        "options": [
+            {
+                "label": "Auto",
+                "value": "auto"
+            },
+            {
+                "label": "Adaptive modern",
+                "value": "adaptive-modern"
+            },
+            {
+                "label": "Bold commerce",
+                "value": "bold-commerce"
+            },
+            {
+                "label": "Editorial data",
+                "value": "editorial-data"
+            },
+            {
+                "label": "Luxury minimal",
+                "value": "luxury-minimal"
+            },
+            {
+                "label": "Modern SaaS",
+                "value": "modern-saas"
+            },
+            {
+                "label": "Social kinetic",
+                "value": "social-kinetic"
+            }
+        ]
+    },
+    {
+        "name": "motionIntensity",
+        "type": "select",
+        "label": "Motion intensity",
+        "default": "auto",
+        "options": [
+            {
+                "label": "Auto from style",
+                "value": "auto"
+            },
+            {
+                "label": "Restrained",
+                "value": "restrained"
+            },
+            {
+                "label": "Balanced",
+                "value": "balanced"
+            },
+            {
+                "label": "Energetic",
+                "value": "energetic"
+            }
+        ]
+    },
+    {
+        "name": "preferredMedia",
+        "type": "select",
+        "label": "Preferred media",
+        "default": "mixed",
+        "options": [
+            {
+                "label": "Image",
+                "value": "image"
+            },
+            {
+                "label": "Video",
+                "value": "video"
+            },
+            {
+                "label": "Mixed",
+                "value": "mixed"
+            }
+        ]
+    },
+    {
+        "name": "recentAssetSlugs",
+        "type": "json",
+        "label": "Recent asset slugs",
+        "default": "[]",
+        "help": "Optional JSON array of recently used creative-library slugs to avoid."
+    },
+    {
+        "name": "brand",
+        "type": "collection",
+        "label": "Brand kit",
+        "spec": [
+            {
+                "name": "name",
+                "type": "text",
+                "label": "Brand name"
+            },
+            {
+                "name": "primaryColor",
+                "type": "color",
+                "label": "Primary color"
+            },
+            {
+                "name": "secondaryColor",
+                "type": "color",
+                "label": "Secondary color"
+            },
+            {
+                "name": "accentColor",
+                "type": "color",
+                "label": "Accent color"
+            },
+            {
+                "name": "headlineFont",
+                "type": "text",
+                "label": "Headline font"
+            },
+            {
+                "name": "bodyFont",
+                "type": "text",
+                "label": "Body font"
+            },
+            {
+                "name": "logoUrl",
+                "type": "url",
+                "label": "Logo URL"
+            }
+        ]
+    }
+]

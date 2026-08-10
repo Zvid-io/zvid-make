@@ -1,0 +1,47 @@
+[
+    {
+        "name": "bulkId",
+        "type": "text",
+        "label": "Bulk ID"
+    },
+    {
+        "name": "queued",
+        "type": "boolean",
+        "label": "Queued"
+    },
+    {
+        "name": "totalJobs",
+        "type": "uinteger",
+        "label": "Total jobs"
+    },
+    {
+        "name": "rejectedItems",
+        "type": "uinteger",
+        "label": "Rejected items"
+    },
+    {
+        "name": "failedToQueue",
+        "type": "uinteger",
+        "label": "Failed to queue"
+    },
+    {
+        "name": "creditsReserved",
+        "type": "number",
+        "label": "Credits reserved"
+    },
+    {
+        "name": "queueAhead",
+        "type": "uinteger",
+        "label": "Jobs ahead"
+    },
+    {
+        "name": "errors",
+        "type": "array",
+        "label": "Item errors"
+    },
+    {
+        "name": "jobs",
+        "type": "array",
+        "label": "Jobs"
+    }
+]

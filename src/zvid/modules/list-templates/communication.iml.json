@@ -2,11 +2,17 @@
     "url": "/api/templates",
     "method": "GET",
     "qs": {
-        "limit": "{{parameters.limit}}"
+        "limit": 100
     },
     "response": {
         "iterate": "{{body.templates}}",
         "output": "{{item}}",
         "limit": "{{parameters.limit}}"
+    },
+    "pagination": {
+        "qs": {
+            "page": "{{pagination.page}}"
+        },
+        "condition": "{{body.pagination.page < body.pagination.totalPages}}"
     }
 }

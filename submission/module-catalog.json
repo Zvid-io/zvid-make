@@ -1,0 +1,279 @@
+{
+    "app": {
+        "name": "zvid",
+        "label": "Zvid",
+        "version": 1,
+        "description": "Renders videos and images from JSON or reusable templates with Zvid."
+    },
+    "connection": {
+        "name": "zvidApiKey",
+        "source": "zvid-api-key",
+        "label": "Zvid API key"
+    },
+    "defaults": {
+        "connection": "zvidApiKey"
+    },
+    "webhook": {
+        "name": "renderEvents",
+        "source": "render-events",
+        "label": "Zvid render events",
+        "type": "dedicated",
+        "connection": "zvidApiKey"
+    },
+    "submissionMetadata": {
+        "serviceUrl": "https://zvid.io",
+        "documentationUrl": "https://docs.zvid.io",
+        "supportEmail": "help@zvid.io",
+        "iconSource": "../../zvid-landing/public/icon-512.png"
+    },
+    "modules": [
+        {
+            "name": "createRender",
+            "source": "create-render",
+            "label": "Create a render",
+            "description": "Queues a video or image render from project JSON or a reusable template.",
+            "type": "action",
+            "action": "create",
+            "group": "Renders"
+        },
+        {
+            "name": "createBulkRender",
+            "source": "create-bulk-render",
+            "label": "Bulk create renders (advanced)",
+            "description": "Queues multiple video or image renders from one project or template and per-item variables.",
+            "type": "action",
+            "action": "create",
+            "group": "Renders"
+        },
+        {
+            "name": "validateRender",
+            "source": "validate-render",
+            "label": "Validate a render payload",
+            "description": "Validates project JSON or a template against the account plan without rendering or spending credits.",
+            "type": "action",
+            "action": "read",
+            "group": "Renders"
+        },
+        {
+            "name": "getRender",
+            "source": "get-render",
+            "label": "Get a render",
+            "description": "Returns a render's status, progress, output URL, and failure details by job ID.",
+            "type": "action",
+            "action": "read",
+            "group": "Renders"
+        },
+        {
+            "name": "getBulkRender",
+            "source": "get-bulk-render",
+            "label": "Get a bulk render",
+            "description": "Returns batch progress and every render job for a bulk render.",
+            "type": "action",
+            "action": "read",
+            "group": "Renders"
+        },
+        {
+            "name": "searchRenders",
+            "source": "list-renders",
+            "label": "Search renders",
+            "description": "Returns renders from the account, optionally filtered by media type.",
+            "type": "search",
+            "group": "Renders"
+        },
+        {
+            "name": "watchRenderEvents",
+            "source": "watch-renders",
+            "label": "Watch render events",
+            "description": "Triggers when a render completes or fails.",
+            "type": "instant-trigger",
+            "webhook": "renderEvents",
+            "group": "Renders"
+        },
+        {
+            "name": "listTemplates",
+            "source": "list-templates",
+            "label": "List templates",
+            "description": "Returns reusable templates from the account.",
+            "type": "search",
+            "group": "Templates"
+        },
+        {
+            "name": "getTemplate",
+            "source": "get-template",
+            "label": "Get a template",
+            "description": "Returns a template, including its project JSON and variables, by template ID.",
+            "type": "action",
+            "action": "read",
+            "group": "Templates"
+        },
+        {
+            "name": "createTemplate",
+            "source": "create-template",
+            "label": "Create a template",
+            "description": "Creates and validates a reusable video or image template from project JSON.",
+            "type": "action",
+            "action": "create",
+            "group": "Templates"
+        },
+        {
+            "name": "updateTemplate",
+            "source": "update-template",
+            "label": "Update a template",
+            "description": "Updates the name, description, or validated project JSON of an active template.",
+            "type": "action",
+            "action": "update",
+            "group": "Templates"
+        },
+        {
+            "name": "archiveTemplate",
+            "source": "delete-template",
+            "label": "Archive a template",
+            "description": "Archives an active template so it can no longer be rendered or updated.",
+            "type": "action",
+            "action": "delete",
+            "group": "Templates"
+        },
+        {
+            "name": "duplicateTemplate",
+            "source": "duplicate-template",
+            "label": "Duplicate a template",
+            "description": "Creates an active editable copy of an owned template.",
+            "type": "action",
+            "action": "create",
+            "group": "Templates"
+        },
+        {
+            "name": "previewTemplate",
+            "source": "preview-template",
+            "label": "Preview a template",
+            "description": "Resolves variables and validates a template without rendering or spending credits.",
+            "type": "action",
+            "action": "read",
+            "group": "Templates"
+        },
+        {
+            "name": "renderFromTemplate",
+            "source": "render-from-template",
+            "label": "Render from a template",
+            "description": "Queues a video or image render from a template and variable values.",
+            "type": "action",
+            "action": "create",
+            "group": "Templates"
+        },
+        {
+            "name": "planCreativeVideo",
+            "source": "plan-creative-video",
+            "label": "Plan a creative video",
+            "description": "Creates a plan-aware storyboard and creative direction before project JSON is authored.",
+            "type": "action",
+            "action": "create",
+            "group": "AI Authoring"
+        },
+        {
+            "name": "getProjectSchema",
+            "source": "get-project-schema",
+            "label": "Get the project schema",
+            "description": "Returns the plan-aware JSON Schema, validation notes, and authoring guidance.",
+            "type": "action",
+            "action": "read",
+            "group": "AI Authoring"
+        },
+        {
+            "name": "listSupportedElements",
+            "source": "list-supported-elements",
+            "label": "List supported elements",
+            "description": "Returns supported project element types and professional authoring guidance.",
+            "type": "action",
+            "action": "read",
+            "group": "AI Authoring"
+        },
+        {
+            "name": "getElementDocumentation",
+            "source": "get-element-docs",
+            "label": "Get element documentation",
+            "description": "Returns fields, constraints, guidance, and an example for one project element type.",
+            "type": "action",
+            "action": "read",
+            "group": "AI Authoring"
+        },
+        {
+            "name": "getExampleProject",
+            "source": "get-example-project",
+            "label": "Get an example project",
+            "description": "Returns a validated example project or the available built-in examples.",
+            "type": "action",
+            "action": "read",
+            "group": "AI Authoring"
+        },
+        {
+            "name": "repairProject",
+            "source": "repair-project",
+            "label": "Repair project JSON",
+            "description": "Repairs mechanical project JSON issues and returns remaining errors and layout warnings.",
+            "type": "action",
+            "action": "update",
+            "group": "AI Authoring"
+        },
+        {
+            "name": "searchCreativeAssets",
+            "source": "search-creative-library",
+            "label": "Search creative assets",
+            "description": "Returns matching examples, design templates, canvas presets, or shapes from Zvid's creative library.",
+            "type": "search",
+            "group": "Creative Library"
+        },
+        {
+            "name": "getCreativeAsset",
+            "source": "get-creative-asset",
+            "label": "Get a creative asset",
+            "description": "Returns metadata for a creative-library asset by type and slug.",
+            "type": "action",
+            "action": "read",
+            "group": "Creative Library"
+        },
+        {
+            "name": "getCreativeAssetContent",
+            "source": "get-creative-asset-content",
+            "label": "Get creative asset content",
+            "description": "Returns the complete JSON content for a creative-library asset.",
+            "type": "action",
+            "action": "read",
+            "group": "Creative Library"
+        },
+        {
+            "name": "searchStockMedia",
+            "source": "search-stock-media",
+            "label": "Search stock media",
+            "description": "Returns matching images, videos, GIFs, or audio from Zvid's stock library.",
+            "type": "search",
+            "group": "Stock Library"
+        },
+        {
+            "name": "getStockLibraryAvailability",
+            "source": "get-stock-library-availability",
+            "label": "Get stock library availability",
+            "description": "Returns which media types are currently available in Zvid's stock library.",
+            "type": "action",
+            "action": "read",
+            "group": "Stock Library"
+        },
+        {
+            "name": "getCreditBalance",
+            "source": "get-credit-balance",
+            "label": "Get the credit balance",
+            "description": "Returns the account's total, subscription, and add-on credit balances.",
+            "type": "action",
+            "action": "read",
+            "group": "Account"
+        },
+        {
+            "name": "makeAnApiCall",
+            "source": "make-an-api-call",
+            "label": "Make an API Call",
+            "description": "Performs an arbitrary authorized API call.",
+            "type": "universal",
+            "subtype": "rest",
+            "group": "Account"
+        }
+    ]
+}

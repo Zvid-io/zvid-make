@@ -5,7 +5,7 @@
         "output": {
             "jobId": "{{body.id}}",
             "state": "{{body.state}}",
-            "url": "{{body.result.url}}",
+            "url": "{{ifempty(body.result.url, body.result)}}",
             "thumbnailUrl": "{{body.result.thumbnailUrl}}",
             "failedReason": "{{body.failedReason}}",
             "raw": "{{body}}"

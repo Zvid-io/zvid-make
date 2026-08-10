@@ -1,6 +1,33 @@
 [
-    { "name": "schemaVersion", "type": "text", "label": "Schema Version" },
-    { "name": "elements", "type": "array", "label": "Supported Elements" },
-    { "name": "notes", "type": "array", "label": "Element Notes" },
-    { "name": "authoringGuidelines", "type": "array", "label": "Professional Authoring Guidelines" }
+    {
+        "name": "schemaVersion",
+        "type": "text",
+        "label": "Schema version"
+    },
+    {
+        "name": "sourceOfTruth",
+        "type": "text",
+        "label": "Source of truth"
+    },
+    {
+        "name": "planLimits",
+        "type": "collection",
+        "label": "Plan limits",
+        "spec": []
+    },
+    {
+        "name": "elements",
+        "type": "array",
+        "label": "Supported elements"
+    },
+    {
+        "name": "notes",
+        "type": "array",
+        "label": "Element notes"
+    },
+    {
+        "name": "authoringGuidelines",
+        "type": "array",
+        "label": "Professional authoring guidelines"
+    }
 ]

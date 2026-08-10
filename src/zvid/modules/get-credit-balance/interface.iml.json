@@ -1,0 +1,34 @@
+[
+    {
+        "name": "balance",
+        "type": "number",
+        "label": "Total balance"
+    },
+    {
+        "name": "subscriptionCredits",
+        "type": "number",
+        "label": "Subscription credits"
+    },
+    {
+        "name": "addonCredits",
+        "type": "collection",
+        "label": "Add-on credits",
+        "spec": [
+            {
+                "name": "balance",
+                "type": "number",
+                "label": "Balance"
+            },
+            {
+                "name": "totalEarned",
+                "type": "number",
+                "label": "Total earned"
+            },
+            {
+                "name": "totalSpent",
+                "type": "number",
+                "label": "Total spent"
+            }
+        ]
+    }
+]

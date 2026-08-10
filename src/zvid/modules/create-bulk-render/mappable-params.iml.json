@@ -1,0 +1,140 @@
+[
+    {
+        "name": "renderType",
+        "type": "select",
+        "label": "Render type",
+        "required": true,
+        "default": "video",
+        "options": [
+            {
+                "label": "Video",
+                "value": "video"
+            },
+            {
+                "label": "Image",
+                "value": "image"
+            }
+        ]
+    },
+    {
+        "name": "source",
+        "type": "select",
+        "label": "Source",
+        "required": true,
+        "default": "template",
+        "options": [
+            {
+                "label": "Template",
+                "value": "template",
+                "nested": [
+                    {
+                        "name": "templateId",
+                        "type": "text",
+                        "label": "Template ID",
+                        "required": true,
+                        "help": "Template ID in the form tpl_ plus 20 characters."
+                    },
+                    {
+                        "name": "variables",
+                        "type": "json",
+                        "label": "Base variables",
+                        "default": "{}",
+                        "help": "Optional JSON object applied to every item. Item variables override these values."
+                    }
+                ]
+            },
+            {
+                "label": "Project JSON",
+                "value": "json",
+                "nested": [
+                    {
+                        "name": "projectJson",
+                        "type": "json",
+                        "label": "Project JSON",
+                        "required": true,
+                        "default": "{}",
+                        "help": "Complete Zvid project JSON used as the base for every item."
+                    },
+                    {
+                        "name": "variables",
+                        "type": "json",
+                        "label": "Base variables",
+                        "default": "{}",
+                        "help": "Optional JSON object applied to every item. Item variables override these values."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "items",
+        "type": "json",
+        "label": "Items",
+        "required": true,
+        "default": "[]",
+        "help": "JSON array with one object per render. Each item may contain variables and name. The maximum is determined by the account plan, with a hard limit of 500."
+    },
+    {
+        "name": "overrides",
+        "type": "collection",
+        "label": "Overrides",
+        "spec": [
+            {
+                "name": "name",
+                "type": "text",
+                "label": "Output name"
+            },
+            {
+                "name": "width",
+                "type": "uinteger",
+                "label": "Width"
+            },
+            {
+                "name": "height",
+                "type": "uinteger",
+                "label": "Height"
+            },
+            {
+                "name": "outputFormat",
+                "type": "text",
+                "label": "Output format"
+            },
+            {
+                "name": "frameRate",
+                "type": "number",
+                "label": "Frame rate"
+            },
+            {
+                "name": "backgroundColor",
+                "type": "text",
+                "label": "Background color"
+            },
+            {
+                "name": "snapshotTime",
+                "type": "number",
+                "label": "Snapshot time (images)"
+            },
+            {
+                "name": "quality",
+                "type": "number",
+                "label": "Quality (images)"
+            },
+            {
+                "name": "transparent",
+                "type": "boolean",
+                "label": "Transparent (images)"
+            }
+        ]
+    },
+    {
+        "name": "batchName",
+        "type": "text",
+        "label": "Batch name"
+    },
+    {
+        "name": "webhookUrl",
+        "type": "url",
+        "label": "Webhook URL",
+        "help": "Optional per-job webhook notified when each render completes or fails."
+    }
+]

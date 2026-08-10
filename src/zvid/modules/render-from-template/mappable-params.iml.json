@@ -9,18 +9,25 @@
     {
         "name": "renderType",
         "type": "select",
-        "label": "Render Type",
+        "label": "Render type",
         "required": true,
         "default": "video",
         "options": [
-            { "label": "Video", "value": "video" },
-            { "label": "Image", "value": "image" }
+            {
+                "label": "Video",
+                "value": "video"
+            },
+            {
+                "label": "Image",
+                "value": "image"
+            }
         ]
     },
     {
         "name": "variables",
-        "type": "any",
+        "type": "json",
         "label": "Variables",
+        "default": "{}",
         "help": "Template variable values as a JSON object, keyed by variable name."
     },
     {

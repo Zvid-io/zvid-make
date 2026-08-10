@@ -7,6 +7,10 @@
     "response": {
         "valid": "{{statusCode === 200}}",
         "error": {
+            "401": {
+                "type": "InvalidAccessTokenError",
+                "message": "[401] The Zvid API key is invalid. Create or copy a key at https://app.zvid.io/api-keys."
+            },
             "message": "[{{statusCode}}] {{ifempty(body.message, body.error)}}"
         },
         "metadata": {

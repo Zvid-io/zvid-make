@@ -12,10 +12,18 @@
                 "nested": [
                     {
                         "name": "projectJson",
-                        "type": "any",
+                        "type": "json",
                         "label": "Project JSON",
                         "required": true,
+                        "default": "{}",
                         "help": "Full Zvid project spec to check. Element types: IMAGE, VIDEO, GIF, SVG, TEXT (in visuals), plus audios, scenes and subtitle. The backend validation is the source of truth — field-level problems come back in `errors`."
+                    },
+                    {
+                        "name": "variables",
+                        "type": "json",
+                        "label": "Variables",
+                        "default": "{}",
+                        "help": "Variable values used to resolve placeholders before validation."
                     }
                 ]
             },
@@ -32,9 +40,9 @@
                     },
                     {
                         "name": "variables",
-                        "type": "collection",
+                        "type": "json",
                         "label": "Variables",
-                        "spec": [],
+                        "default": "{}",
                         "help": "Template variable values, keyed by variable name (use a JSON object)."
                     }
                 ]
@@ -47,15 +55,51 @@
         "label": "Overrides",
         "help": "Output overrides validated together with the payload/template (same fields as Create a Render).",
         "spec": [
-            { "name": "name", "type": "text", "label": "Output Name" },
-            { "name": "width", "type": "uinteger", "label": "Width" },
-            { "name": "height", "type": "uinteger", "label": "Height" },
-            { "name": "outputFormat", "type": "text", "label": "Output Format" },
-            { "name": "frameRate", "type": "number", "label": "Frame Rate" },
-            { "name": "backgroundColor", "type": "text", "label": "Background Color" },
-            { "name": "snapshotTime", "type": "number", "label": "Snapshot Time (Images)" },
-            { "name": "quality", "type": "number", "label": "Quality (Images)" },
-            { "name": "transparent", "type": "boolean", "label": "Transparent (Images)" }
+            {
+                "name": "name",
+                "type": "text",
+                "label": "Output name"
+            },
+            {
+                "name": "width",
+                "type": "uinteger",
+                "label": "Width"
+            },
+            {
+                "name": "height",
+                "type": "uinteger",
+                "label": "Height"
+            },
+            {
+                "name": "outputFormat",
+                "type": "text",
+                "label": "Output format"
+            },
+            {
+                "name": "frameRate",
+                "type": "number",
+                "label": "Frame rate"
+            },
+            {
+                "name": "backgroundColor",
+                "type": "text",
+                "label": "Background color"
+            },
+            {
+                "name": "snapshotTime",
+                "type": "number",
+                "label": "Snapshot time (images)"
+            },
+            {
+                "name": "quality",
+                "type": "number",
+                "label": "Quality (images)"
+            },
+            {
+                "name": "transparent",
+                "type": "boolean",
+                "label": "Transparent (images)"
+            }
         ]
     },
     {

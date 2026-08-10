@@ -1,0 +1,28 @@
+{
+    "type": "image",
+    "name": "Make private app smoke test",
+    "width": 1080,
+    "height": 1080,
+    "outputFormat": "png",
+    "transparent": true,
+    "visuals": [
+        {
+            "type": "TEXT",
+            "html": "<p style=\"font-size:132px;font-weight:900;margin-bottom:20px\">Zvid + Make</p><p style=\"font-size:44px;color:#e9d5ff\">Private module test</p>",
+            "position": "center-center",
+            "width": 900,
+            "height": 900,
+            "style": {
+                "backgroundColor": "#7c3aed",
+                "borderRadius": "48px",
+                "color": "#ffffff",
+                "textAlign": "center",
+                "fontFamily": "Inter",
+                "display": "flex",
+                "flexDirection": "column",
+                "alignItems": "center",
+                "justifyContent": "center"
+            }
+        }
+    ]
+}

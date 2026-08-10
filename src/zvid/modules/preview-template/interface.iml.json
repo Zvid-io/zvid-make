@@ -1,0 +1,14 @@
+[
+    {
+        "name": "project",
+        "type": "collection",
+        "label": "Resolved project JSON",
+        "spec": []
+    },
+    {
+        "name": "stats",
+        "type": "collection",
+        "label": "Project statistics",
+        "spec": []
+    }
+]

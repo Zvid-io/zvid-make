@@ -1,10 +1,24 @@
 {
     "baseUrl": "https://api.zvid.io",
     "headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
         "x-api-key": "{{connection.apiKey}}"
     },
     "response": {
         "error": {
+            "401": {
+                "type": "InvalidAccessTokenError",
+                "message": "[401] {{ifempty(body.message, body.error)}}"
+            },
+            "402": {
+                "type": "OutOfSpaceError",
+                "message": "[402] {{ifempty(body.message, body.error)}}"
+            },
+            "429": {
+                "type": "RateLimitError",
+                "message": "[429] {{ifempty(body.message, body.error)}}"
+            },
             "message": "[{{statusCode}}] {{ifempty(body.message, body.error)}}"
         }
     },

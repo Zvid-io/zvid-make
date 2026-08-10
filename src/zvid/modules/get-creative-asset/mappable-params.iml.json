@@ -1,0 +1,33 @@
+[
+    {
+        "name": "kind",
+        "type": "select",
+        "label": "Asset type",
+        "required": true,
+        "default": "examples",
+        "options": [
+            {
+                "label": "Complete examples",
+                "value": "examples"
+            },
+            {
+                "label": "Design templates",
+                "value": "design-templates"
+            },
+            {
+                "label": "Canvas presets",
+                "value": "canvas-presets"
+            },
+            {
+                "label": "Shapes",
+                "value": "shapes"
+            }
+        ]
+    },
+    {
+        "name": "slug",
+        "type": "text",
+        "label": "Slug",
+        "required": true
+    }
+]

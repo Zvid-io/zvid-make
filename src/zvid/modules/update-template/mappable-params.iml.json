@@ -8,19 +8,19 @@
     {
         "name": "name",
         "type": "text",
-        "label": "New Name",
+        "label": "New name",
         "required": false
     },
     {
         "name": "description",
         "type": "text",
-        "label": "New Description",
+        "label": "New description",
         "required": false
     },
     {
         "name": "projectJson",
-        "type": "collection",
-        "label": "Replacement Project JSON",
+        "type": "json",
+        "label": "Replacement project JSON",
         "required": false,
         "help": "If supplied, this replaces the complete template project and is validated before saving."
     }

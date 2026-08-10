@@ -1,22 +1,79 @@
 [
-    { "name": "event", "type": "text", "label": "Event" },
-    { "name": "jobId", "type": "text", "label": "Job ID" },
-    { "name": "timestamp", "type": "date", "label": "Timestamp" },
-    { "name": "test", "type": "boolean", "label": "Is Test Delivery" },
+    {
+        "name": "event",
+        "type": "text",
+        "label": "Event"
+    },
+    {
+        "name": "jobId",
+        "type": "text",
+        "label": "Job ID"
+    },
+    {
+        "name": "timestamp",
+        "type": "date",
+        "label": "Timestamp"
+    },
+    {
+        "name": "test",
+        "type": "boolean",
+        "label": "Is test delivery"
+    },
     {
         "name": "data",
         "type": "collection",
         "label": "Data",
         "spec": [
-            { "name": "status", "type": "text", "label": "Status" },
-            { "name": "url", "type": "url", "label": "Output URL" },
-            { "name": "thumbnailUrl", "type": "url", "label": "Thumbnail URL" },
-            { "name": "duration", "type": "number", "label": "Duration" },
-            { "name": "size", "type": "uinteger", "label": "Size (Bytes)" },
-            { "name": "creditsCharged", "type": "number", "label": "Credits Charged" },
-            { "name": "creditsRefunded", "type": "number", "label": "Credits Refunded" },
-            { "name": "reason", "type": "text", "label": "Failure Reason" },
-            { "name": "templateId", "type": "text", "label": "Template ID" }
+            {
+                "name": "status",
+                "type": "text",
+                "label": "Status"
+            },
+            {
+                "name": "type",
+                "type": "text",
+                "label": "Render type"
+            },
+            {
+                "name": "url",
+                "type": "url",
+                "label": "Output URL"
+            },
+            {
+                "name": "thumbnailUrl",
+                "type": "url",
+                "label": "Thumbnail URL"
+            },
+            {
+                "name": "duration",
+                "type": "number",
+                "label": "Duration"
+            },
+            {
+                "name": "size",
+                "type": "uinteger",
+                "label": "Size (bytes)"
+            },
+            {
+                "name": "renderDuration",
+                "type": "number",
+                "label": "Render duration"
+            },
+            {
+                "name": "creditsCharged",
+                "type": "number",
+                "label": "Credits charged"
+            },
+            {
+                "name": "error",
+                "type": "text",
+                "label": "Failure reason"
+            },
+            {
+                "name": "templateId",
+                "type": "text",
+                "label": "Template ID"
+            }
         ]
     }
 ]

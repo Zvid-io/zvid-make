@@ -7,15 +7,17 @@
     },
     {
         "name": "variables",
-        "type": "collection",
+        "type": "json",
         "label": "Variables",
-        "required": false
+        "required": false,
+        "default": "{}"
     },
     {
         "name": "overrides",
-        "type": "collection",
-        "label": "Output Overrides",
+        "type": "json",
+        "label": "Output overrides",
         "required": false,
+        "default": "{}",
         "help": "Free dry run: resolves variables and validates without rendering or spending credits."
     }
 ]

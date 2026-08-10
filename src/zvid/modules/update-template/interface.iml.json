@@ -1,0 +1,58 @@
+[
+    {
+        "name": "id",
+        "type": "text",
+        "label": "Template ID"
+    },
+    {
+        "name": "userId",
+        "type": "uinteger",
+        "label": "User ID"
+    },
+    {
+        "name": "name",
+        "type": "text",
+        "label": "Name"
+    },
+    {
+        "name": "description",
+        "type": "text",
+        "label": "Description"
+    },
+    {
+        "name": "project",
+        "type": "collection",
+        "label": "Project JSON",
+        "spec": []
+    },
+    {
+        "name": "type",
+        "type": "text",
+        "label": "Template type"
+    },
+    {
+        "name": "variablesSummary",
+        "type": "array",
+        "label": "Variables"
+    },
+    {
+        "name": "version",
+        "type": "uinteger",
+        "label": "Version"
+    },
+    {
+        "name": "status",
+        "type": "text",
+        "label": "Status"
+    },
+    {
+        "name": "createdAt",
+        "type": "date",
+        "label": "Created at"
+    },
+    {
+        "name": "updatedAt",
+        "type": "date",
+        "label": "Updated at"
+    }
+]

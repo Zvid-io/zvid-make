@@ -1,0 +1,31 @@
+{
+    "url": "/api/stock/search",
+    "method": "GET",
+    "qs": {
+        "type": "{{parameters.type}}",
+        "provider": "all",
+        "query": "{{ifempty(parameters.query, undefined)}}",
+        "perPage": 60
+    },
+    "response": {
+        "iterate": "{{body.items}}",
+        "output": {
+            "id": "{{item.id}}",
+            "kind": "{{item.kind}}",
+            "preview": "{{item.preview}}",
+            "src": "{{item.src}}",
+            "width": "{{item.width}}",
+            "height": "{{item.height}}",
+            "duration": "{{item.duration}}",
+            "description": "{{item.description}}",
+            "credit": "{{item.credit}}"
+        },
+        "limit": "{{parameters.limit}}"
+    },
+    "pagination": {
+        "qs": {
+            "page": "{{pagination.page}}"
+        },
+        "condition": "{{body.hasMore}}"
+    }
+}

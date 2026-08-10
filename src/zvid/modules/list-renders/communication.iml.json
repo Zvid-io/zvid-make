@@ -2,12 +2,33 @@
     "url": "/api/jobs",
     "method": "GET",
     "qs": {
-        "limit": "{{parameters.limit}}",
+        "limit": 100,
         "type": "{{if(parameters.type = 'all', undefined, parameters.type)}}"
     },
     "response": {
         "iterate": "{{body.jobs}}",
-        "output": "{{item}}",
+        "output": {
+            "id": "{{item.id}}",
+            "status": "{{item.status}}",
+            "jobType": "{{item.job_type}}",
+            "creditsEstimated": "{{item.credits_estimated}}",
+            "creditsConsumed": "{{item.credits_consumed}}",
+            "duration": "{{item.video_duration}}",
+            "resolution": "{{item.video_resolution}}",
+            "outputUrl": "{{item.output_url}}",
+            "thumbnailUrl": "{{item.thumbnail_url}}",
+            "errorMessage": "{{item.error_message}}",
+            "createdAt": "{{item.created_at}}",
+            "completedAt": "{{item.completed_at}}",
+            "name": "{{item.name}}",
+            "templateId": "{{item.template_id}}"
+        },
         "limit": "{{parameters.limit}}"
+    },
+    "pagination": {
+        "qs": {
+            "page": "{{pagination.page}}"
+        },
+        "condition": "{{body.pagination.hasNext}}"
     }
 }

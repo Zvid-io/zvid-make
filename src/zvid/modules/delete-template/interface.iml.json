@@ -1,0 +1,12 @@
+[
+    {
+        "name": "archived",
+        "type": "boolean",
+        "label": "Archived"
+    },
+    {
+        "name": "id",
+        "type": "text",
+        "label": "Template ID"
+    }
+]

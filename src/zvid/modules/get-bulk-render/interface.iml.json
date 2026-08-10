@@ -1,0 +1,131 @@
+[
+    {
+        "name": "bulkId",
+        "type": "text",
+        "label": "Bulk ID"
+    },
+    {
+        "name": "name",
+        "type": "text",
+        "label": "Batch name"
+    },
+    {
+        "name": "templateId",
+        "type": "text",
+        "label": "Template ID"
+    },
+    {
+        "name": "renderType",
+        "type": "text",
+        "label": "Render type"
+    },
+    {
+        "name": "status",
+        "type": "text",
+        "label": "Status"
+    },
+    {
+        "name": "totalJobs",
+        "type": "uinteger",
+        "label": "Total jobs"
+    },
+    {
+        "name": "creditsReserved",
+        "type": "number",
+        "label": "Credits reserved"
+    },
+    {
+        "name": "counts",
+        "type": "collection",
+        "label": "Job counts",
+        "spec": [
+            {
+                "name": "completed",
+                "type": "uinteger",
+                "label": "Completed"
+            },
+            {
+                "name": "failed",
+                "type": "uinteger",
+                "label": "Failed"
+            },
+            {
+                "name": "pending",
+                "type": "uinteger",
+                "label": "Pending"
+            }
+        ]
+    },
+    {
+        "name": "createdAt",
+        "type": "date",
+        "label": "Created at"
+    },
+    {
+        "name": "jobs",
+        "type": "array",
+        "label": "Jobs",
+        "spec": [
+            {
+                "name": "id",
+                "type": "text",
+                "label": "Job ID"
+            },
+            {
+                "name": "status",
+                "type": "text",
+                "label": "Status"
+            },
+            {
+                "name": "name",
+                "type": "text",
+                "label": "Name"
+            },
+            {
+                "name": "creditsEstimated",
+                "type": "number",
+                "label": "Credits estimated"
+            },
+            {
+                "name": "creditsConsumed",
+                "type": "number",
+                "label": "Credits consumed"
+            },
+            {
+                "name": "videoDuration",
+                "type": "number",
+                "label": "Video duration"
+            },
+            {
+                "name": "videoResolution",
+                "type": "text",
+                "label": "Video resolution"
+            },
+            {
+                "name": "outputUrl",
+                "type": "url",
+                "label": "Output URL"
+            },
+            {
+                "name": "thumbnailUrl",
+                "type": "url",
+                "label": "Thumbnail URL"
+            },
+            {
+                "name": "errorMessage",
+                "type": "text",
+                "label": "Error message"
+            },
+            {
+                "name": "createdAt",
+                "type": "date",
+                "label": "Created at"
+            },
+            {
+                "name": "completedAt",
+                "type": "date",
+                "label": "Completed at"
+            }
+        ]
+    }
+]

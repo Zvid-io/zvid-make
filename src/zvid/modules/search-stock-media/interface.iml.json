@@ -1,0 +1,48 @@
+[
+    {
+        "name": "id",
+        "type": "text",
+        "label": "Media ID"
+    },
+    {
+        "name": "kind",
+        "type": "text",
+        "label": "Media type"
+    },
+    {
+        "name": "preview",
+        "type": "url",
+        "label": "Preview URL"
+    },
+    {
+        "name": "src",
+        "type": "url",
+        "label": "Render URL"
+    },
+    {
+        "name": "width",
+        "type": "uinteger",
+        "label": "Width"
+    },
+    {
+        "name": "height",
+        "type": "uinteger",
+        "label": "Height"
+    },
+    {
+        "name": "duration",
+        "type": "number",
+        "label": "Duration"
+    },
+    {
+        "name": "description",
+        "type": "text",
+        "label": "Description"
+    },
+    {
+        "name": "credit",
+        "type": "collection",
+        "label": "Attribution",
+        "spec": []
+    }
+]

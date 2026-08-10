@@ -1,0 +1,72 @@
+[
+    {
+        "name": "id",
+        "type": "text",
+        "label": "Job ID"
+    },
+    {
+        "name": "status",
+        "type": "text",
+        "label": "Status"
+    },
+    {
+        "name": "jobType",
+        "type": "text",
+        "label": "Render type"
+    },
+    {
+        "name": "creditsEstimated",
+        "type": "number",
+        "label": "Credits estimated"
+    },
+    {
+        "name": "creditsConsumed",
+        "type": "number",
+        "label": "Credits consumed"
+    },
+    {
+        "name": "duration",
+        "type": "number",
+        "label": "Duration"
+    },
+    {
+        "name": "resolution",
+        "type": "text",
+        "label": "Resolution"
+    },
+    {
+        "name": "outputUrl",
+        "type": "url",
+        "label": "Output URL"
+    },
+    {
+        "name": "thumbnailUrl",
+        "type": "url",
+        "label": "Thumbnail URL"
+    },
+    {
+        "name": "errorMessage",
+        "type": "text",
+        "label": "Error message"
+    },
+    {
+        "name": "createdAt",
+        "type": "date",
+        "label": "Created at"
+    },
+    {
+        "name": "completedAt",
+        "type": "date",
+        "label": "Completed at"
+    },
+    {
+        "name": "name",
+        "type": "text",
+        "label": "Name"
+    },
+    {
+        "name": "templateId",
+        "type": "text",
+        "label": "Template ID"
+    }
+]

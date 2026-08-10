@@ -6,12 +6,30 @@
         "required": true,
         "default": "promo-video",
         "options": [
-            { "label": "All Examples", "value": "all" },
-            { "label": "Promo Video", "value": "promo-video" },
-            { "label": "Still Image", "value": "still-image" },
-            { "label": "Subtitles", "value": "subtitles" },
-            { "label": "Template Render", "value": "template-render" },
-            { "label": "Webhook Flow", "value": "webhook-flow" }
+            {
+                "label": "All examples",
+                "value": "all"
+            },
+            {
+                "label": "Promo video",
+                "value": "promo-video"
+            },
+            {
+                "label": "Still image",
+                "value": "still-image"
+            },
+            {
+                "label": "Subtitles",
+                "value": "subtitles"
+            },
+            {
+                "label": "Template render",
+                "value": "template-render"
+            },
+            {
+                "label": "Webhook flow",
+                "value": "webhook-flow"
+            }
         ]
     }
 ]
