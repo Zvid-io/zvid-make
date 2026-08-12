@@ -1,0 +1,42 @@
+{
+  "name": "Zvid App Review 6 - Render event trigger",
+  "flow": [
+    {
+      "id": 1,
+      "module": "app#zvid-local-test-hapajf:watchRenderEvents",
+      "version": 1,
+      "parameters": {
+        "__IMTCONN__": 9700609,
+        "__IMTHOOK__": 0
+      },
+      "mapper": {},
+      "metadata": {
+        "designer": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "instant": true,
+    "version": 1,
+    "scenario": {
+      "roundtrips": 1,
+      "maxErrors": 3,
+      "autoCommit": true,
+      "autoCommitTriggerLast": true,
+      "sequential": true,
+      "slots": null,
+      "confidential": false,
+      "dataloss": false,
+      "dlq": false,
+      "freshVariables": false
+    },
+    "designer": {
+      "orphans": []
+    },
+    "zone": "eu1.make.com",
+    "notes": []
+  }
+}

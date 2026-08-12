@@ -1,0 +1,318 @@
+{
+  "name": "Zvid App Review 1 - Authoring and libraries",
+  "flow": [
+    {
+      "id": 1,
+      "module": "app#zvid-local-test-hapajf:getCreditBalance",
+      "version": 1,
+      "parameters": {
+        "__IMTCONN__": 9700609
+      },
+      "mapper": {},
+      "metadata": {
+        "designer": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "id": 2,
+      "module": "builtin:BasicRouter",
+      "version": 1,
+      "mapper": null,
+      "metadata": {
+        "designer": {
+          "x": 300,
+          "y": 0
+        }
+      },
+      "routes": [
+        {
+          "flow": [
+            {
+              "id": 3,
+              "module": "app#zvid-local-test-hapajf:planCreativeVideo",
+              "version": 1,
+              "parameters": {
+                "__IMTCONN__": 9700609
+              },
+              "mapper": {
+                "brief": "Create a synthetic 15-second launch video for an imaginary product named Aurora Lamp. Use no customer or personal data.",
+                "variationMode": "fresh",
+                "exploreCount": 3,
+                "aspectRatio": "16:9",
+                "duration": 15,
+                "style": "auto",
+                "motionIntensity": "auto",
+                "preferredMedia": "mixed"
+              },
+              "metadata": {
+                "designer": {
+                  "x": 600,
+                  "y": -700
+                }
+              }
+            },
+            {
+              "id": 4,
+              "module": "app#zvid-local-test-hapajf:getProjectSchema",
+              "version": 1,
+              "parameters": {
+                "__IMTCONN__": 9700609
+              },
+              "mapper": {
+                "target": "project"
+              },
+              "metadata": {
+                "designer": {
+                  "x": 900,
+                  "y": -700
+                }
+              }
+            },
+            {
+              "id": 5,
+              "module": "app#zvid-local-test-hapajf:listSupportedElements",
+              "version": 1,
+              "parameters": {
+                "__IMTCONN__": 9700609
+              },
+              "mapper": {},
+              "metadata": {
+                "designer": {
+                  "x": 1200,
+                  "y": -700
+                }
+              }
+            },
+            {
+              "id": 6,
+              "module": "app#zvid-local-test-hapajf:getElementDocumentation",
+              "version": 1,
+              "parameters": {
+                "__IMTCONN__": 9700609
+              },
+              "mapper": {
+                "elementType": "TEXT"
+              },
+              "metadata": {
+                "designer": {
+                  "x": 1500,
+                  "y": -700
+                }
+              }
+            },
+            {
+              "id": 7,
+              "module": "app#zvid-local-test-hapajf:getExampleProject",
+              "version": 1,
+              "parameters": {
+                "__IMTCONN__": 9700609
+              },
+              "mapper": {
+                "name": "promo-video"
+              },
+              "metadata": {
+                "designer": {
+                  "x": 1800,
+                  "y": -700
+                }
+              }
+            },
+            {
+              "id": 8,
+              "module": "app#zvid-local-test-hapajf:repairProject",
+              "version": 1,
+              "parameters": {
+                "__IMTCONN__": 9700609
+              },
+              "mapper": {
+                "projectJson": {
+                  "type": "image",
+                  "name": "Zvid reviewer QA synthetic image",
+                  "width": 1080,
+                  "height": 1080,
+                  "outputFormat": "png",
+                  "transparent": false,
+                  "visuals": [
+                    {
+                      "type": "TEXT",
+                      "html": "<p style=\"font-size:96px;font-weight:800;margin:0\">Zvid reviewer QA</p><p style=\"font-size:36px;margin-top:24px\">Synthetic test content</p>",
+                      "position": "center-center",
+                      "width": 900,
+                      "height": 900,
+                      "style": {
+                        "backgroundColor": "#5b21b6",
+                        "borderRadius": "24px",
+                        "color": "#ffffff",
+                        "textAlign": "center",
+                        "fontFamily": "Inter",
+                        "display": "flex",
+                        "flexDirection": "column",
+                        "alignItems": "center",
+                        "justifyContent": "center"
+                      }
+                    }
+                  ]
+                }
+              },
+              "metadata": {
+                "designer": {
+                  "x": 2100,
+                  "y": -700
+                }
+              }
+            }
+          ]
+        },
+        {
+          "flow": [
+            {
+              "id": 9,
+              "module": "app#zvid-local-test-hapajf:searchCreativeAssets",
+              "version": 1,
+              "parameters": {
+                "__IMTCONN__": 9700609
+              },
+              "mapper": {
+                "kind": "shapes",
+                "query": "",
+                "limit": 101
+              },
+              "metadata": {
+                "designer": {
+                  "x": 600,
+                  "y": -450
+                }
+              }
+            }
+          ]
+        },
+        {
+          "flow": [
+            {
+              "id": 10,
+              "module": "app#zvid-local-test-hapajf:getCreativeAsset",
+              "version": 1,
+              "parameters": {
+                "__IMTCONN__": 9700609
+              },
+              "mapper": {
+                "kind": "examples",
+                "slug": "ecom-hero-promo"
+              },
+              "metadata": {
+                "designer": {
+                  "x": 600,
+                  "y": -200
+                }
+              }
+            },
+            {
+              "id": 11,
+              "module": "app#zvid-local-test-hapajf:getCreativeAssetContent",
+              "version": 1,
+              "parameters": {
+                "__IMTCONN__": 9700609
+              },
+              "mapper": {
+                "kind": "examples",
+                "slug": "ecom-hero-promo"
+              },
+              "metadata": {
+                "designer": {
+                  "x": 900,
+                  "y": -200
+                }
+              }
+            }
+          ]
+        },
+        {
+          "flow": [
+            {
+              "id": 12,
+              "module": "app#zvid-local-test-hapajf:getStockLibraryAvailability",
+              "version": 1,
+              "parameters": {
+                "__IMTCONN__": 9700609
+              },
+              "mapper": {},
+              "metadata": {
+                "designer": {
+                  "x": 600,
+                  "y": 50
+                }
+              }
+            },
+            {
+              "id": 13,
+              "module": "app#zvid-local-test-hapajf:searchStockMedia",
+              "version": 1,
+              "parameters": {
+                "__IMTCONN__": 9700609
+              },
+              "mapper": {
+                "type": "image",
+                "query": "abstract",
+                "limit": 61
+              },
+              "metadata": {
+                "designer": {
+                  "x": 900,
+                  "y": 50
+                }
+              }
+            }
+          ]
+        },
+        {
+          "flow": [
+            {
+              "id": 14,
+              "module": "app#zvid-local-test-hapajf:makeAnApiCall",
+              "version": 1,
+              "parameters": {
+                "__IMTCONN__": 9700609
+              },
+              "mapper": {
+                "url": "/api/credits/balance",
+                "method": "GET",
+                "headers": [],
+                "qs": []
+              },
+              "metadata": {
+                "designer": {
+                  "x": 600,
+                  "y": 300
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "instant": false,
+    "version": 1,
+    "scenario": {
+      "roundtrips": 1,
+      "maxErrors": 3,
+      "autoCommit": true,
+      "autoCommitTriggerLast": true,
+      "sequential": true,
+      "slots": null,
+      "confidential": false,
+      "dataloss": false,
+      "dlq": false,
+      "freshVariables": false
+    },
+    "designer": {
+      "orphans": []
+    },
+    "zone": "eu1.make.com",
+    "notes": []
+  }
+}

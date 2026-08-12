@@ -1,0 +1,175 @@
+{
+  "name": "Zvid App Review 4 - Bulk render lifecycle",
+  "flow": [
+    {
+      "id": 1,
+      "module": "app#zvid-local-test-hapajf:getCreditBalance",
+      "version": 1,
+      "parameters": {
+        "__IMTCONN__": 9700609
+      },
+      "mapper": {},
+      "metadata": {
+        "designer": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "id": 2,
+      "module": "app#zvid-local-test-hapajf:validateRender",
+      "version": 1,
+      "parameters": {
+        "__IMTCONN__": 9700609
+      },
+      "mapper": {
+        "source": "json",
+        "projectJson": {
+          "type": "image",
+          "name": "Zvid reviewer QA synthetic image",
+          "width": 1080,
+          "height": 1080,
+          "outputFormat": "png",
+          "transparent": false,
+          "visuals": [
+            {
+              "type": "TEXT",
+              "html": "<p style=\"font-size:96px;font-weight:800;margin:0\">Zvid reviewer QA</p><p style=\"font-size:36px;margin-top:24px\">Synthetic test content</p>",
+              "position": "center-center",
+              "width": 900,
+              "height": 900,
+              "style": {
+                "backgroundColor": "#5b21b6",
+                "borderRadius": "24px",
+                "color": "#ffffff",
+                "textAlign": "center",
+                "fontFamily": "Inter",
+                "display": "flex",
+                "flexDirection": "column",
+                "alignItems": "center",
+                "justifyContent": "center"
+              }
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "designer": {
+          "x": 300,
+          "y": 0
+        }
+      }
+    },
+    {
+      "id": 3,
+      "module": "app#zvid-local-test-hapajf:createBulkRender",
+      "version": 1,
+      "parameters": {
+        "__IMTCONN__": 9700609
+      },
+      "mapper": {
+        "renderType": "image",
+        "source": "json",
+        "projectJson": {
+          "type": "image",
+          "name": "Zvid reviewer QA synthetic image",
+          "width": 1080,
+          "height": 1080,
+          "outputFormat": "png",
+          "transparent": false,
+          "visuals": [
+            {
+              "type": "TEXT",
+              "html": "<p style=\"font-size:96px;font-weight:800;margin:0\">Zvid reviewer QA</p><p style=\"font-size:36px;margin-top:24px\">Synthetic test content</p>",
+              "position": "center-center",
+              "width": 900,
+              "height": 900,
+              "style": {
+                "backgroundColor": "#5b21b6",
+                "borderRadius": "24px",
+                "color": "#ffffff",
+                "textAlign": "center",
+                "fontFamily": "Inter",
+                "display": "flex",
+                "flexDirection": "column",
+                "alignItems": "center",
+                "justifyContent": "center"
+              }
+            }
+          ]
+        },
+        "items": [
+          {
+            "name": "zvid-reviewer-qa-bulk-a",
+            "variables": {}
+          },
+          {
+            "name": "zvid-reviewer-qa-bulk-b",
+            "variables": {}
+          }
+        ],
+        "batchName": "Zvid reviewer QA synthetic bulk"
+      },
+      "metadata": {
+        "designer": {
+          "x": 600,
+          "y": 0
+        }
+      }
+    },
+    {
+      "id": 4,
+      "module": "util:FunctionSleep",
+      "version": 1,
+      "parameters": {},
+      "mapper": {
+        "duration": "15"
+      },
+      "metadata": {
+        "designer": {
+          "x": 900,
+          "y": 0
+        }
+      }
+    },
+    {
+      "id": 5,
+      "module": "app#zvid-local-test-hapajf:getBulkRender",
+      "version": 1,
+      "parameters": {
+        "__IMTCONN__": 9700609
+      },
+      "mapper": {
+        "bulkId": "{{3.bulkId}}"
+      },
+      "metadata": {
+        "designer": {
+          "x": 1200,
+          "y": 0
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "instant": false,
+    "version": 1,
+    "scenario": {
+      "roundtrips": 1,
+      "maxErrors": 3,
+      "autoCommit": true,
+      "autoCommitTriggerLast": true,
+      "sequential": true,
+      "slots": null,
+      "confidential": false,
+      "dataloss": false,
+      "dlq": false,
+      "freshVariables": false
+    },
+    "designer": {
+      "orphans": []
+    },
+    "zone": "eu1.make.com",
+    "notes": []
+  }
+}

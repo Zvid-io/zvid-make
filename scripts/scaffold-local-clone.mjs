@@ -55,6 +55,7 @@ async function scaffoldClone(targetRoot) {
 
     const copies = [];
     addCopy(copies, targetRoot, 'general/base.iml.json', manifest.generalCodeFiles?.base);
+    addCopy(copies, targetRoot, 'README.md', manifest.generalCodeFiles?.readme);
     collectConnectionCopies(copies, targetRoot, components.connection?.[connectionName]);
     collectWebhookCopies(
         copies,

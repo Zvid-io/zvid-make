@@ -259,6 +259,21 @@ test('the universal module cannot target an absolute external URL', async () => 
     assert.ok(!communication.url.startsWith('{{parameters.url}}'));
 });
 
+test('the universal module replaces raw HTML 404 pages with a readable error', async () => {
+    const communication = await readJson(
+        'src',
+        'zvid',
+        'modules',
+        'make-an-api-call',
+        'communication.iml.json',
+    );
+
+    assert.equal(
+        communication.response.error['404'].message,
+        '[404] The requested Zvid API route was not found.',
+    );
+});
+
 test('Make covers the current n8n operation surface', async () => {
     const catalog = await readJson('submission', 'module-catalog.json');
     const sources = new Set(catalog.modules.map((module) => module.source));
@@ -313,6 +328,44 @@ test('project JSON render modules accept variables for placeholder resolution', 
     }
 });
 
+test('template detail modules expose concrete output fields for downstream mapping', async () => {
+    for (const source of [
+        'create-template',
+        'get-template',
+        'update-template',
+        'duplicate-template',
+    ]) {
+        const communication = await readJson(
+            'src',
+            'zvid',
+            'modules',
+            source,
+            'communication.iml.json',
+        );
+        assert.equal(typeof communication.response.output, 'object');
+        assert.equal(communication.response.output.id, '{{body.template.id}}');
+        assert.equal(communication.response.output.project, '{{body.template.project}}');
+        assert.equal(
+            communication.response.output.variablesSummary,
+            '{{body.template.variablesSummary}}',
+        );
+    }
+});
+
+test('render validation treats API validation errors as normal module output', async () => {
+    const communication = await readJson(
+        'src',
+        'zvid',
+        'modules',
+        'validate-render',
+        'communication.iml.json',
+    );
+
+    assert.equal(communication.response.valid.condition, '{{statusCode = 200 || statusCode = 400}}');
+    assert.equal(communication.response.output.valid, '{{if(statusCode = 200, true, false)}}');
+    assert.equal(communication.response.output.errors, '{{body.details}}');
+});
+
 test('public source uses canonical Zvid URLs and does not expose stock implementation details', async () => {
     const publicFiles = [
         join(root, 'README.md'),
@@ -338,7 +391,25 @@ test('webhook deliveries fail closed when the signature cannot be verified', asy
         'communication.iml.json',
     );
     assert.match(webhook.condition, /sha256/);
+    assert.match(webhook.condition, /createJSON\(body\)/);
+    assert.match(webhook.condition, /data\.secret/);
+    assert.ok(!webhook.condition.includes('webhook.secret'));
+    assert.ok(!webhook.condition.includes('json(body)'));
+    assert.deepEqual(Object.keys(webhook.output), ['event', 'jobId', 'timestamp', 'test', 'data']);
     assert.ok(!webhook.condition.includes(', true)'), 'signature verification falls back to accepting a request');
+});
+
+test('webhook attach persists the endpoint id and signing secret returned by Zvid', async () => {
+    const attach = await readJson(
+        'src',
+        'zvid',
+        'webhooks',
+        'render-events',
+        'attach.iml.json',
+    );
+
+    assert.equal(attach.response.data.externalHookId, '{{body.id}}');
+    assert.equal(attach.response.data.secret, '{{body.secret}}');
 });
 
 test('the clone synchronizer follows generated makecomapp.json paths', async () => {
@@ -365,6 +436,7 @@ test('the clone synchronizer follows generated makecomapp.json paths', async () 
             fileVersion: 1,
             generalCodeFiles: {
                 base: 'generated/base.json',
+                readme: 'generated/README.md',
                 groups: 'generated/groups.json',
             },
             components: {
@@ -402,6 +474,10 @@ test('the clone synchronizer follows generated makecomapp.json paths', async () 
         assert.equal(
             await readFile(join(targetRoot, 'generated', 'base.json'), 'utf8'),
             await readFile(join(sourceRoot, 'general', 'base.iml.json'), 'utf8'),
+        );
+        assert.equal(
+            await readFile(join(targetRoot, 'generated', 'README.md'), 'utf8'),
+            await readFile(join(sourceRoot, 'README.md'), 'utf8'),
         );
         assert.equal(
             await readFile(join(targetRoot, 'generated', 'createRender.communication.json'), 'utf8'),
@@ -452,6 +528,7 @@ test('the clone scaffolder preserves Make IDs and builds the complete app', asyn
         fileVersion: 1,
         generalCodeFiles: {
             base: 'general/base.iml.json',
+            readme: 'README.md',
             groups: 'modules/groups.json',
         },
         components: {
@@ -530,6 +607,10 @@ test('the clone scaffolder preserves Make IDs and builds the complete app', asyn
         ).flatMap((group) => group.modules);
 
         assert.deepEqual(scaffolded.origins, origins, 'remote component IDs must be preserved');
+        assert.equal(
+            await readFile(join(targetRoot, scaffolded.generalCodeFiles.readme), 'utf8'),
+            await readFile(join(sourceRoot, 'README.md'), 'utf8'),
+        );
         assert.equal(Object.keys(modules).length, catalog.modules.length);
         assert.deepEqual(new Set(groupedModules), new Set(catalog.modules.map((module) => module.name)));
         assert.equal(modules.watchRenderEvents.moduleType, 'instant_trigger');

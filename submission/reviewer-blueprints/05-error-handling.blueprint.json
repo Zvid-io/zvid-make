@@ -1,0 +1,129 @@
+{
+  "name": "Zvid App Review 5 - Error handling",
+  "flow": [
+    {
+      "id": 1,
+      "module": "app#zvid-local-test-hapajf:getCreditBalance",
+      "version": 1,
+      "parameters": {
+        "__IMTCONN__": 9700609
+      },
+      "mapper": {},
+      "metadata": {
+        "designer": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "id": 2,
+      "module": "builtin:BasicRouter",
+      "version": 1,
+      "mapper": null,
+      "metadata": {
+        "designer": {
+          "x": 300,
+          "y": 0
+        }
+      },
+      "routes": [
+        {
+          "flow": [
+            {
+              "id": 3,
+              "module": "app#zvid-local-test-hapajf:validateRender",
+              "version": 1,
+              "parameters": {
+                "__IMTCONN__": 9700609
+              },
+              "mapper": {
+                "source": "json",
+                "projectJson": {
+                  "type": "image",
+                  "name": "Zvid reviewer QA invalid payload",
+                  "width": 0,
+                  "height": 0,
+                  "outputFormat": "png",
+                  "visuals": []
+                }
+              },
+              "metadata": {
+                "designer": {
+                  "x": 600,
+                  "y": -250
+                }
+              }
+            }
+          ]
+        },
+        {
+          "flow": [
+            {
+              "id": 4,
+              "module": "app#zvid-local-test-hapajf:makeAnApiCall",
+              "version": 1,
+              "parameters": {
+                "__IMTCONN__": 9700609
+              },
+              "mapper": {
+                "url": "/api/reviewer-qa/not-found",
+                "method": "GET",
+                "headers": [],
+                "qs": []
+              },
+              "metadata": {
+                "designer": {
+                  "x": 600,
+                  "y": 0
+                }
+              }
+            }
+          ]
+        },
+        {
+          "flow": [
+            {
+              "id": 5,
+              "module": "app#zvid-local-test-hapajf:getTemplate",
+              "version": 1,
+              "parameters": {
+                "__IMTCONN__": 9700609
+              },
+              "mapper": {
+                "templateId": "tpl_ffffffffffffffffffff"
+              },
+              "metadata": {
+                "designer": {
+                  "x": 600,
+                  "y": 250
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "instant": false,
+    "version": 1,
+    "scenario": {
+      "roundtrips": 1,
+      "maxErrors": 3,
+      "autoCommit": true,
+      "autoCommitTriggerLast": true,
+      "sequential": true,
+      "slots": null,
+      "confidential": false,
+      "dataloss": false,
+      "dlq": false,
+      "freshVariables": false
+    },
+    "designer": {
+      "orphans": []
+    },
+    "zone": "eu1.make.com",
+    "notes": []
+  }
+}

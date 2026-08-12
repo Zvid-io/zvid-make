@@ -8,8 +8,8 @@
     },
     "response": {
         "data": {
-            "externalHookId": "{{body.webhook.id}}",
-            "secret": "{{body.webhook.secret}}"
+            "externalHookId": "{{body.id}}",
+            "secret": "{{body.secret}}"
         }
     }
 }

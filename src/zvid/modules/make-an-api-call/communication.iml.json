@@ -9,6 +9,11 @@
     },
     "body": "{{parameters.body}}",
     "response": {
+        "error": {
+            "404": {
+                "message": "[404] The requested Zvid API route was not found."
+            }
+        },
         "output": {
             "statusCode": "{{statusCode}}",
             "headers": "{{headers}}",

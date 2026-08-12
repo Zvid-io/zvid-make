@@ -9,7 +9,9 @@
         "webhookUrl": "{{ifempty(parameters.webhookUrl, undefined)}}"
     },
     "response": {
-        "valid": "{{statusCode === 200 || statusCode === 400}}",
+        "valid": {
+            "condition": "{{statusCode = 200 || statusCode = 400}}"
+        },
         "error": {
             "message": "[{{statusCode}}] {{ifempty(body.message, body.error)}}"
         },

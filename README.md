@@ -119,7 +119,7 @@ The validation module treats the API's validation-only HTTP 400 as a normal Make
 
 The attached webhook registers on scenario activation and unregisters on deactivation. Zvid signs deliveries as `sha256=hex(hmac(secret, "<timestamp>.<raw body>"))` in `X-Zvid-Signature`, with the timestamp in `X-Zvid-Timestamp`.
 
-Make parses the incoming JSON before the webhook IML condition runs, so verification recomputes the signature from Make's compact `json(body)` representation. Zvid sends compact JSON, and the condition fails closed when the secret, timestamp, or signature is absent or does not match. Verify a real completed/failed delivery and a rejected invalid-signature delivery in the private app before review.
+Make parses the incoming JSON before the webhook IML condition runs, so verification recomputes the signature from Make's compact `createJSON(body)` representation. The signing secret saved by the attach response is available in webhook communication as `data.secret`. Zvid sends compact JSON, and the condition fails closed when the secret, timestamp, or signature is absent or does not match. Verify a real completed/failed delivery and a rejected invalid-signature delivery in the private app before review.
 
 ## Cloud submission handoff
 

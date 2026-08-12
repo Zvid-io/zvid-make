@@ -1,0 +1,98 @@
+{
+  "name": "Zvid App Review 1B - Account searches (clean account only)",
+  "flow": [
+    {
+      "id": 1,
+      "module": "app#zvid-local-test-hapajf:getCreditBalance",
+      "version": 1,
+      "parameters": {
+        "__IMTCONN__": 9700609
+      },
+      "mapper": {},
+      "metadata": {
+        "designer": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "id": 2,
+      "module": "builtin:BasicRouter",
+      "version": 1,
+      "mapper": null,
+      "metadata": {
+        "designer": {
+          "x": 300,
+          "y": 0
+        }
+      },
+      "routes": [
+        {
+          "flow": [
+            {
+              "id": 3,
+              "module": "app#zvid-local-test-hapajf:searchRenders",
+              "version": 1,
+              "parameters": {
+                "__IMTCONN__": 9700609
+              },
+              "mapper": {
+                "type": "all",
+                "limit": 101
+              },
+              "metadata": {
+                "designer": {
+                  "x": 600,
+                  "y": -150
+                }
+              }
+            }
+          ]
+        },
+        {
+          "flow": [
+            {
+              "id": 4,
+              "module": "app#zvid-local-test-hapajf:listTemplates",
+              "version": 1,
+              "parameters": {
+                "__IMTCONN__": 9700609
+              },
+              "mapper": {
+                "limit": 101
+              },
+              "metadata": {
+                "designer": {
+                  "x": 600,
+                  "y": 150
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "instant": false,
+    "version": 1,
+    "scenario": {
+      "roundtrips": 1,
+      "maxErrors": 3,
+      "autoCommit": true,
+      "autoCommitTriggerLast": true,
+      "sequential": true,
+      "slots": null,
+      "confidential": false,
+      "dataloss": false,
+      "dlq": false,
+      "freshVariables": false
+    },
+    "designer": {
+      "orphans": []
+    },
+    "zone": "eu1.make.com",
+    "notes": []
+  }
+}

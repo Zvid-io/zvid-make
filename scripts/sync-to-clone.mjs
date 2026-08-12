@@ -29,6 +29,7 @@ async function syncClone(targetRoot) {
 
     const copies = [];
     addCopy(copies, targetRoot, 'general/base.iml.json', manifest.generalCodeFiles?.base);
+    addCopy(copies, targetRoot, 'README.md', manifest.generalCodeFiles?.readme);
     addCopy(copies, targetRoot, 'modules/groups.json', manifest.generalCodeFiles?.groups);
 
     collectComponentCopies(copies, targetRoot, 'connection', selectedComponents.connection);

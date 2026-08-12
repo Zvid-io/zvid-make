@@ -6,5 +6,19 @@
         "description": "{{ifempty(parameters.description, undefined)}}",
         "payload": "{{parameters.projectJson}}"
     },
-    "response": { "output": "{{body.template}}" }
+    "response": {
+        "output": {
+            "id": "{{body.template.id}}",
+            "userId": "{{body.template.userId}}",
+            "name": "{{body.template.name}}",
+            "description": "{{body.template.description}}",
+            "project": "{{body.template.project}}",
+            "type": "{{body.template.type}}",
+            "variablesSummary": "{{body.template.variablesSummary}}",
+            "version": "{{body.template.version}}",
+            "status": "{{body.template.status}}",
+            "createdAt": "{{body.template.createdAt}}",
+            "updatedAt": "{{body.template.updatedAt}}"
+        }
+    }
 }

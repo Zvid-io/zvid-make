@@ -1,7 +1,13 @@
 {
-    "condition": "{{headers.`x-zvid-signature` = 'sha256=' + sha256(headers.`x-zvid-timestamp` + '.' + json(body), 'hex', webhook.secret)}}",
+    "condition": "{{headers.`x-zvid-signature` = 'sha256=' + sha256(headers.`x-zvid-timestamp` + '.' + createJSON(body), 'hex', data.secret)}}",
     "respond": {
         "status": 200
     },
-    "output": "{{body}}"
+    "output": {
+        "event": "{{body.event}}",
+        "jobId": "{{body.jobId}}",
+        "timestamp": "{{body.timestamp}}",
+        "test": "{{body.test}}",
+        "data": "{{body.data}}"
+    }
 }
